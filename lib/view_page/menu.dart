@@ -50,7 +50,7 @@ class _MenuPageState extends State<MenuPage> {
         children:[ Column(
           children: [
             SizedBox(
-              height: 350.h,
+              height: 320.h,
             ),
             Container(
               decoration: BoxDecoration(
@@ -58,25 +58,25 @@ class _MenuPageState extends State<MenuPage> {
                 borderRadius: BorderRadius.vertical(top:Radius.circular(40))
               ),
               //
-              height: 480.h,
+              height: 520.h,
               child:
                 Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                      padding: const EdgeInsets.symmetric(horizontal:20.0,vertical:20),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Row(
-                            mainAxisAlignment: MainAxisAlignment.start,
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               Padding(
                                 padding: const EdgeInsets.all(8.0),
                                 child: CircleAvatar(
                                   backgroundColor: Colors.black,
-                                  radius: 30.sp,
+                                  radius: 40.sp,
                                 ),
                               ),
                               Padding(
@@ -97,17 +97,18 @@ class _MenuPageState extends State<MenuPage> {
                       ),
                     ),
                     Divider(
-                      thickness: 2,
-                      color: Colors.grey,
-                      height: 1.h,
-                      indent: 8,
-                      endIndent: 8,
+                      thickness: 1,
+                      color: Colors.grey.withOpacity(0.7),
+                      height: 3.h,
+                      indent: 20.w,
+                      endIndent: 20.w,
                     ),
                     Container(
                       height: 380.h,
                       child: GridView(
                         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                            crossAxisCount: 3, mainAxisSpacing: 5,crossAxisSpacing: 5),
+                          childAspectRatio: 2/2.2,
+                            crossAxisCount: 3, mainAxisSpacing: 10,crossAxisSpacing: 5),
                         children: [
                           Column(
                             children: [
@@ -123,13 +124,16 @@ class _MenuPageState extends State<MenuPage> {
                                       width: 100.w,
                                       color: Color(0xffadedd2),
                                       child: Center(
-                                          child:Icon(Icons.today_outlined,color:Color(0xff6baa90))
+                                          child:Icon(Icons.today_outlined,color:Color(0xff6baa90),size:40.sp)
                                       ),
                                     ),
                                   ),
                                 ),
                               ),
-                              Text('Attendance')
+                              Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Text('Attendance'),
+                              )
                             ],
                           ),
                           Column(
@@ -146,13 +150,16 @@ class _MenuPageState extends State<MenuPage> {
                                       width: 100.w,
                                       color: Color(0xffadedd2),
                                       child: Center(
-                                          child:Icon(Icons.timer_sharp,color:Color(0xff6baa90))
+                                          child:Icon(Icons.timer_sharp,color:Color(0xff6baa90),size:40.sp)
                                       ),
                                     ),
                                   ),
                                 ),
                               ),
-                              Text('Timetable')
+                              Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Text('Timetable'),
+                              )
                             ],
                           ),
                           Column(
@@ -165,12 +172,15 @@ class _MenuPageState extends State<MenuPage> {
                                     width: 100.w,
                                     color: Color(0xffadedd2),
                                     child: Center(
-                                        child:Icon(Icons.notifications_active,color:Color(0xff6baa90))
+                                        child:Icon(Icons.notifications_active,color:Color(0xff6baa90),size:40.sp)
                                     ),
                                   ),
                                 ),
                               ),
-                              Text('Notice')
+                              Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Text('Notice'),
+                              )
                             ],
                           ),
                           Column(
@@ -183,12 +193,15 @@ class _MenuPageState extends State<MenuPage> {
                                     width: 100.w,
                                     color: Color(0xffadedd2),
                                     child: Center(
-                                        child:Icon(Icons.person,color:Color(0xff6baa90))
+                                        child:Icon(Icons.person,color:Color(0xff6baa90),size:40.sp)
                                     ),
                                   ),
                                 ),
                               ),
-                              Text('Profile')
+                              Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Text('Profile'),
+                              )
                             ],
                           ),
                           Column(
@@ -201,12 +214,15 @@ class _MenuPageState extends State<MenuPage> {
                                     width: 100.w,
                                     color: Color(0xffadedd2),
                                     child: Center(
-                                        child:Icon(Icons.add_card_sharp,color:Color(0xff6baa90))
+                                        child:Icon(Icons.add_card_sharp,color:Color(0xff6baa90),size:40.sp)
                                     ),
                                   ),
                                 ),
                               ),
-                              Text('Holidays')
+                              Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Text('Holidays'),
+                              )
                             ],
                           ),
                           Column(
@@ -219,12 +235,15 @@ class _MenuPageState extends State<MenuPage> {
                                     width: 100.w,
                                     color: Color(0xffadedd2),
                                     child: Center(
-                                      child:Icon(Icons.settings,color:Color(0xff6baa90))
+                                      child:Icon(Icons.settings,color:Color(0xff6baa90),size:40.sp)
                                     ),
                                   ),
                                 ),
                               ),
-                              Text('Settings')
+                              Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Text('Settings'),
+                              )
                             ],
                           ),
                         ],

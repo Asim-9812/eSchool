@@ -9,6 +9,7 @@ class UserPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         ClipRRect(
           borderRadius: BorderRadius.vertical(bottom:Radius.circular(30)),
@@ -38,7 +39,7 @@ class UserPage extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text('Username',style:TextStyle(fontSize: 32.sp,color: Colors.white,fontWeight: FontWeight.bold),),
-                              Text('Class:9A | Roll No. 9',style:TextStyle(fontSize: 18.sp,color: Colors.white),)
+                              Text('Class : 9 A | Roll No : 9',style:TextStyle(fontSize: 18.sp,color: Colors.white),)
                             ],
                           ),
                         )
@@ -58,7 +59,7 @@ class UserPage extends StatelessWidget {
           height: 20.h,
         ),
         Container(
-            width: 350.w,
+            width: double.infinity,
             height: 200.h,
             child: Swiper(
               pagination: SwiperPagination(),
@@ -67,15 +68,17 @@ class UserPage extends StatelessWidget {
               viewportFraction: 1,
               scale: 0.9,
               itemBuilder: (context,index){
-                return Card(
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(20)
-                  ),
-                  color: Colors.grey,
-                  child: SizedBox(
-                    width: 350,
-                    height: 100,
-                    child: Center(child: Text('Exam Date... ')),
+                return Center(
+                  child: Card(
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20)
+                    ),
+                    color: Colors.grey,
+                    child: SizedBox(
+                      width: 350,
+                      height: 200,
+                      child: Center(child: Text('Exam Date... ')),
+                    ),
                   ),
                 );
               },
@@ -93,6 +96,7 @@ class UserPage extends StatelessWidget {
           width: double.infinity,
           child: GridView(
             gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              childAspectRatio: 2/2.2,
                 crossAxisCount: 3, mainAxisSpacing: 5,crossAxisSpacing: 5),
             children: [
               Column(
@@ -101,13 +105,16 @@ class UserPage extends StatelessWidget {
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(20),
                         child: Container(
-                          height: 90.h,
-                          width: 90.w,
+                          height: 100.h,
+                          width: 100.w,
                           color: Colors.redAccent,
                         ),
                       ),
                   ),
-                  Text('English')
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text('English'),
+                  )
                 ],
               ),
               Column(
@@ -116,13 +123,17 @@ class UserPage extends StatelessWidget {
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(20),
                         child: Container(
-                          height: 90.h,
-                          width: 90.w,
+                          height: 100.h,
+                          width: 100.w,
                           color: Colors.greenAccent,
                         ),
                       ),
                   ),
-                  Text('Social')
+                  Padding(
+
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text('Social'),
+                  )
                 ],
               ),
               Column(
@@ -131,13 +142,16 @@ class UserPage extends StatelessWidget {
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(20),
                         child: Container(
-                          height: 90.h,
-                          width: 90.w,
+                          height: 100.h,
+                          width: 100.w,
                           color: Colors.orangeAccent,
                         ),
                       ),
                   ),
-                  Text('Nepali')
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text('Nepali'),
+                  )
                 ],
               ),
               Column(
@@ -146,13 +160,16 @@ class UserPage extends StatelessWidget {
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(20),
                         child: Container(
-                          height: 90.h,
-                          width: 90.w,
+                          height: 100.h,
+                          width: 100.w,
                           color: Colors.purpleAccent,
                         ),
                       ),
                   ),
-                  Text('Chemistry')
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text('Chemistry'),
+                  )
                 ],
               ),
               Column(
@@ -161,13 +178,16 @@ class UserPage extends StatelessWidget {
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(20),
                         child: Container(
-                          height: 90.h,
-                          width: 90.w,
+                          height: 100.h,
+                          width: 100.w,
                           color: Colors.green,
                         ),
                       ),
                   ),
-                  Text('Biology')
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text('Biology'),
+                  )
                 ],
               ),
               Column(
@@ -176,13 +196,16 @@ class UserPage extends StatelessWidget {
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(20),
                         child: Container(
-                          height: 90.h,
-                          width: 90.w,
+                          height: 100.h,
+                          width: 100.w,
                           color: Colors.red,
                         ),
                       ),
                   ),
-                  Text('Sports')
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text('Sports'),
+                  )
                 ],
               ),
               Column(
@@ -191,13 +214,16 @@ class UserPage extends StatelessWidget {
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(20),
                         child: Container(
-                          height: 90.h,
-                          width: 90.w,
+                          height: 100.h,
+                          width: 100.w,
                           color: Colors.blueAccent,
                         ),
                       ),
                   ),
-                  Text('Math')
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text('Math'),
+                  )
                 ],
               ),
               Column(
@@ -206,20 +232,44 @@ class UserPage extends StatelessWidget {
                       child:ClipRRect(
                         borderRadius: BorderRadius.circular(20),
                         child: Container(
-                          height: 90.h,
-                          width: 90.w,
+                          height: 100.h,
+                          width: 100.w,
                           color: Colors.yellowAccent,
                         ),
                       ),
                   ),
-                  Text('physics')
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text('physics'),
+                  )
                 ],
               ),
+              GridTile(
+                  child:ClipRRect(
+                    borderRadius: BorderRadius.circular(20),
+                    child: Container(
+                      height: 100.h,
+                      width: 100.w,
+                    ),
+                  ),
+              ),
+              GridTile(
+                  child:ClipRRect(
+                    borderRadius: BorderRadius.circular(20),
+                    child: Container(
+                      height: 50.h,
+                      width: 50.w,
+                    ),
+                  ),
+              ),
+
+
 
             ],
 
           )
-        )
+        ),
+
       ],
     );
   }

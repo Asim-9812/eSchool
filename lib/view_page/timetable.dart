@@ -56,7 +56,8 @@ class _TimeTableState extends State<TimeTable> with TickerProviderStateMixin{
                 unselectedLabelColor: Colors.blueAccent,
                 indicatorColor: Colors.blue,
                 indicator: BoxDecoration(
-                  color: Colors.blue
+                  color: Colors.blue,
+                  borderRadius: BorderRadius.circular(10)
                 ),
               tabs: [
                 Tab(text: 'MON',),

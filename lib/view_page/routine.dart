@@ -13,156 +13,227 @@ class Routine extends StatelessWidget {
       children: [
         Padding(
           padding: const EdgeInsets.symmetric(vertical: 8.0),
-          child: ListTile(
-            leading: Container(
-              color: Colors.blue,
-              height: 80.h,
-              width: 80.w
-            ),
-            title: Text('TIME'),
-            subtitle: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-              children:[
-                Text('SUBJECT'),
-                Text('TEACHER')
-              ]
-            ),
+          child: Container(
+            height: 80.h,
+            child: Card(
+              elevation: 5,
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Row(
+                  children: [
+                    Container(
+                        decoration: BoxDecoration(
+                            color:  Colors.blue,
+                            borderRadius: BorderRadius.circular(5)
+                        ),
+                        height: 70.h,
+                        width: 70.w
+                    ),
+                    Expanded(
+                      child: ListTile(
+                        title: Text('TIME'),
+                        subtitle: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                          children:[
+                            Text('SUBJECT'),
+                            Text('TEACHER')
+                          ]
+                        ),
 
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
           ),
         ),
         Padding(
           padding: const EdgeInsets.symmetric(vertical: 8.0),
-          child: ListTile(
-            leading: Container(
-              color: Colors.blue,
-              height: 80.h,
-              width: 80.w
-            ),
-            title: Text('TIME'),
-            subtitle: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-              children:[
-                Text('SUBJECT'),
-                Text('TEACHER')
-              ]
-            ),
+          child: Container(
+            height: 80.h,
+            child: Card(
+              elevation: 5,
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Row(
+                  children: [
+                    Container(
+                        decoration: BoxDecoration(
+                            color:  Colors.blue,
+                            borderRadius: BorderRadius.circular(5)
+                        ),
+                        height: 70.h,
+                        width: 70.w
+                    ),
+                    Expanded(
+                      child: ListTile(
+                        title: Text('TIME'),
+                        subtitle: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                          children:[
+                            Text('SUBJECT'),
+                            Text('TEACHER')
+                          ]
+                        ),
 
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
           ),
         ),
         Padding(
           padding: const EdgeInsets.symmetric(vertical: 8.0),
-          child: ListTile(
-            leading: Container(
-              color: Colors.blue,
-              height: 80.h,
-              width: 80.w
-            ),
-            title: Text('TIME'),
-            subtitle: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-              children:[
-                Text('SUBJECT'),
-                Text('TEACHER')
-              ]
-            ),
+          child: Container(
+            height: 80.h,
+            child: Card(
+              elevation: 5,
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Row(
+                  children: [
+                    Container(
+                        decoration: BoxDecoration(
+                            color:  Colors.blue,
+                            borderRadius: BorderRadius.circular(5)
+                        ),
+                        height: 70.h,
+                        width: 70.w
+                    ),
+                    Expanded(
+                      child: ListTile(
+                        title: Text('TIME'),
+                        subtitle: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                          children:[
+                            Text('SUBJECT'),
+                            Text('TEACHER')
+                          ]
+                        ),
 
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
           ),
         ),
         Padding(
           padding: const EdgeInsets.symmetric(vertical: 8.0),
-          child: ListTile(
-            leading: Container(
-              color: Colors.blue,
-              height: 80.h,
-              width: 80.w
-            ),
-            title: Text('TIME'),
-            subtitle: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-              children:[
-                Text('SUBJECT'),
-                Text('TEACHER')
-              ]
-            ),
+          child: Container(
+            height: 80.h,
+            child: Card(
+              elevation: 5,
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Row(
+                  children: [
+                    Container(
+                        decoration: BoxDecoration(
+                            color:  Colors.blue,
+                            borderRadius: BorderRadius.circular(5)
+                        ),
+                        height: 70.h,
+                        width: 70.w
+                    ),
+                    Expanded(
+                      child: ListTile(
+                        title: Text('TIME'),
+                        subtitle: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                          children:[
+                            Text('SUBJECT'),
+                            Text('TEACHER')
+                          ]
+                        ),
 
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
           ),
         ),
         Padding(
           padding: const EdgeInsets.symmetric(vertical: 8.0),
-          child: ListTile(
-            leading: Container(
-              color: Colors.blue,
-              height: 80.h,
-              width: 80.w
-            ),
-            title: Text('TIME'),
-            subtitle: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-              children:[
-                Text('SUBJECT'),
-                Text('TEACHER')
-              ]
-            ),
+          child: Container(
+            height: 80.h,
+            child: Card(
+              elevation: 5,
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Row(
+                  children: [
+                    Container(
+                        decoration: BoxDecoration(
+                            color:  Colors.blue,
+                            borderRadius: BorderRadius.circular(5)
+                        ),
+                        height: 70.h,
+                        width: 70.w
+                    ),
+                    Expanded(
+                      child: ListTile(
+                        title: Text('TIME'),
+                        subtitle: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                          children:[
+                            Text('SUBJECT'),
+                            Text('TEACHER')
+                          ]
+                        ),
 
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
           ),
         ),
         Padding(
           padding: const EdgeInsets.symmetric(vertical: 8.0),
-          child: ListTile(
-            leading: Container(
-              color: Colors.blue,
-              height: 80.h,
-              width: 80.w
-            ),
-            title: Text('TIME'),
-            subtitle: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-              children:[
-                Text('SUBJECT'),
-                Text('TEACHER')
-              ]
-            ),
+          child: Container(
+            height: 80.h,
+            child: Card(
+              elevation: 5,
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Row(
+                  children: [
+                    Container(
+                        decoration: BoxDecoration(
+                            color:  Colors.blue,
+                            borderRadius: BorderRadius.circular(5)
+                        ),
+                        height: 70.h,
+                        width: 70.w
+                    ),
+                    Expanded(
+                      child: ListTile(
+                        title: Text('TIME'),
+                        subtitle: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                          children:[
+                            Text('SUBJECT'),
+                            Text('TEACHER')
+                          ]
+                        ),
 
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
           ),
         ),
-        Padding(
-          padding: const EdgeInsets.symmetric(vertical: 8.0),
-          child: ListTile(
-            leading: Container(
-              color: Colors.blue,
-              height: 80.h,
-              width: 80.w
-            ),
-            title: Text('TIME'),
-            subtitle: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-              children:[
-                Text('SUBJECT'),
-                Text('TEACHER')
-              ]
-            ),
 
-          ),
-        ),
-        Padding(
-          padding: const EdgeInsets.symmetric(vertical: 8.0),
-          child: ListTile(
-            leading: Container(
-              color: Colors.blue,
-              height: 80.h,
-              width: 80.w
-            ),
-            title: Text('TIME'),
-            subtitle: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-              children:[
-                Text('SUBJECT'),
-                Text('TEACHER')
-              ]
-            ),
-
-          ),
-        ),
 
       ],
     );

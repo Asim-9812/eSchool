@@ -6,6 +6,7 @@ import 'package:intl/intl.dart';
 import 'package:table_calendar/table_calendar.dart';
 
 
+
 class Attendance extends StatefulWidget {
 
   @override
@@ -16,7 +17,6 @@ class _AttendanceState extends State<Attendance> {
 
   Map<String, List> mySelectedEvents={};
 
-  CalendarFormat _calendarFormat = CalendarFormat.month;
   DateTime _focusedDay = DateTime.now();
   DateTime? _selectedDate;
 
@@ -45,19 +45,19 @@ class _AttendanceState extends State<Attendance> {
             mainAxisSize: MainAxisSize.min,
             children: [
               TextButton(
-                style: TextButton.styleFrom(
-                  backgroundColor: Colors.green
-                ),
+                  style: TextButton.styleFrom(
+                      backgroundColor: Colors.green
+                  ),
                   onPressed: (){
 
-                  setState(() {
-                    mySelectedEvents[DateFormat('yyyy-MM-dd').format(_selectedDate!)]=[
-                      {
-                        'present':true
-                      }
-                    ];
-                  });
-                  Navigator.pop(context);
+                    setState(() {
+                      mySelectedEvents[DateFormat('yyyy-MM-dd').format(_selectedDate!)]=[
+                        {
+                          'present':true
+                        }
+                      ];
+                    });
+                    Navigator.pop(context);
 
                   } ,
                   child: Text('Present',style: TextStyle(color: Colors.white))
@@ -68,7 +68,11 @@ class _AttendanceState extends State<Attendance> {
                   onPressed: (){
 
                     setState(() {
-                      // mySelectedEvents[DateFormat('yyyy-MM-dd').format(_selectedDate!)]!.removeAt();
+                      mySelectedEvents[DateFormat('yyyy-MM-dd').format(_selectedDate!)]=[
+                        {
+                          'absent':true
+                        }
+                      ];
                     });
                     Navigator.pop(context);
 
@@ -81,130 +85,192 @@ class _AttendanceState extends State<Attendance> {
     );
   }
 
+
+
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-        child: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-                SizedBox(
-                height:20.h
-                   ),
-                Text('Attendance',style : TextStyle(fontSize: 30.sp,fontWeight: FontWeight.bold,color: Colors.white)),
-                SizedBox(
-                height:80.h
+    return Column(
+      children: [
+        SizedBox(
+          height:60.h
+        ),
+        Text('Attendance',style : TextStyle(fontSize: 30.sp,fontWeight: FontWeight.bold,color: Colors.white)),
+        SizedBox(
+            height:40.h
+        ),
+        Stack(
+          children:[
+            Positioned(
+              top: 5.h,
+              child: Container(
+                // color: Colors.white,
+                child: Center(
+                  child: Card(
+                    elevation: 5,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20)
+                    ),
+                    child: SizedBox(
+                      width: 320.w,
+                      height: 65.h,
+                    ),
+                  ),
                 ),
+              ),
+            ),
+            Positioned(
+              top: 80.h,
+              child: Container(
+                // color: Colors.white,
+                child: Center(
+                  child: Card(
+                    elevation: 5,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20)
+                    ),
+                    child: SizedBox(
+                      width: 320.w,
+                      height: 270.h,
+                    ),
+                  ),
+                ),
+              ),
+            ),
 
-          Container(
-            color: Colors.white,
-            height: 400.h,
-            width: 300.w,
+            Container(
+            
+            width: 330.w,
             child: TableCalendar(
-                focusedDay: _focusedDay,
-                firstDay: DateTime(2021),
-                lastDay: DateTime(2024),
-              calendarFormat: _calendarFormat,
-
-
-              onDaySelected: (selectedDay, focusedDay) {
-                if (!isSameDay (_selectedDate, selectedDay)) {
-                // Call `setState()` when updating the selected day
-                  setState(() {
-                    _selectedDate = selectedDay;
-                    _focusedDay = focusedDay;
-                  });
-                }
-              },
-              selectedDayPredicate: (day){
-                  return isSameDay(_selectedDate,day);
-              },
-
-              onFormatChanged: (format){
-                  if(_calendarFormat!=format){
+              eventLoader: _attendance,
+                onDaySelected: (selectedDay, focusedDay) {
+                  if (!isSameDay (_selectedDate, selectedDay)) {
+                    // Call `setState()` when updating the selected day
                     setState(() {
-                      _calendarFormat= format;
+                      _selectedDate = selectedDay;
+                      _focusedDay = focusedDay;
                     });
                   }
-              },
-              onPageChanged: (focusedDay){
+                },
+                selectedDayPredicate: (day){
+                  return isSameDay(_selectedDate,day);
+                },
+                onPageChanged: (focusedDay){
                   _focusedDay=focusedDay;
-              },
+                },
+                daysOfWeekStyle: DaysOfWeekStyle(
+                  weekdayStyle: TextStyle(color:Colors.blueAccent,fontWeight: FontWeight.bold,fontSize: 20.sp),
+                  weekendStyle: TextStyle(color:Colors.blueAccent,fontWeight: FontWeight.bold,fontSize: 20.sp)
+                ),
+                focusedDay: _focusedDay,
+                firstDay: DateTime.utc(2021,01,01),
+                lastDay: DateTime.utc(2024,12,12),
+                headerStyle: HeaderStyle(
+                  formatButtonVisible: false,
+                  headerMargin: EdgeInsets.all(10),
+                  titleCentered: true,
+                  titleTextStyle: TextStyle(fontWeight: FontWeight.bold),
 
-              eventLoader: _attendance,
-              calendarStyle: CalendarStyle(
-                markerSize: 40,
-                markerDecoration: BoxDecoration(
-                  color: Colors.green.withOpacity(0.6),
-                  borderRadius: BorderRadius.circular(100)
+                ),
+                calendarStyle: CalendarStyle(
+                  markerSize: 25.sp,
+                  markerDecoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(100),
+                    color: Colors.green.withOpacity(0.7)
+                  ),
+                  markersAutoAligned: false,
+                  markersAlignment: Alignment.center,
+                  cellMargin: EdgeInsets.all(10),
+
+                  outsideDaysVisible: false,
+                  tablePadding: EdgeInsets.symmetric(horizontal:10),
+
+
+                ),
+
+
+                
+            )
+          ),
+
+
+
+          ]
+        ),
+
+        SizedBox(
+            height:40.h
+        ),
+
+        Container(
+          width: 320.w,
+          height:180.h,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                  color: Colors.green,
+                ),
+                width: 140.w,
+                height: 140.h,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Text('Total Present',style: TextStyle(color: Colors.white,fontSize: 20.sp,fontWeight: FontWeight.bold)),
+                    CircleAvatar(
+                      backgroundColor: Colors.white,
+                      radius: 30.sp,
+                    )
+                  ],
+                )
+              ),
+              Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                  color: Colors.redAccent,
+                ),
+                width: 140.w,
+                height: 140.h,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Text('Total Absent',style: TextStyle(color: Colors.white,fontSize: 20.sp,fontWeight: FontWeight.bold)),
+                    CircleAvatar(
+                      backgroundColor: Colors.white,
+                      radius: 30.sp,
+                    )
+                  ],
                 )
               ),
 
 
+
+            ]
+          )
+        ),
+        InkWell(
+          onTap: () async {
+            _showDialogEvent();
+          },
+          child: Container(
+            width: 50.w,
+            height: 50.h,
+            child: Center(
+              child: Card(
+                elevation: 10,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(100),
+                  ),
+                  child: Center(
+                      child: Icon(Icons.add,color: Colors.black,)
+                  )
+              ),
             ),
           ),
-          
-          Padding(
-            padding: const EdgeInsets.all(20.0),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                InkWell(
-                  onTap: () async {
-                    _showDialogEvent();
-                  },
-                  child: Container(
-                    height: 170.h,
-                    width: 170.h,
-                    decoration: BoxDecoration(
-                      color: Colors.green,
-                      borderRadius: BorderRadius.circular(20)
-                    ),
-                    child: Center(
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          Text('Total Present',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 25.sp),),
-                          CircleAvatar(
-                            radius: 40,
-                            backgroundColor: Colors.white,
-                          )
-                        ],
-                      ),
-                    ),
-                  ),
-                ),
+        )
 
-                InkWell(
-                  onTap: () async {
-                    _showDialogEvent();
-                  },
-                  child: Container(
-                    height: 170.h,
-                    width: 170.h,
-                    decoration: BoxDecoration(
-                      color: Colors.red,
-                      borderRadius: BorderRadius.circular(20)
-                    ),
-                    child: Center(
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          Text('Total Absent',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 25.sp)),
-                          CircleAvatar(
-                            radius: 40,
-                            backgroundColor: Colors.white,
-                          )
-                        ],
-                      ),
-                    ),
-                  ),
-                )
-              ],
-            ),
-          )
-          
-        ]),
-
+      ],
     );
   }
 }

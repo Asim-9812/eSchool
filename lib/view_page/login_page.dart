@@ -37,63 +37,57 @@ class LoginPage extends StatelessWidget {
                   ),
                   Padding(
                     padding: const EdgeInsets.all(8.0),
-                    child: ClipRRect(
-                      borderRadius: BorderRadius.circular(10),
-
-                      child: InkWell(
-                        onTap: (){
-                          Get.to(()=>HomePage());
-                        },
-                        child: Container(
-                          width: 300.w,
+                    child: InkWell(
+                      onTap: (){
+                        Get.to(()=>HomePage());
+                      },
+                      child: Container(
+                        width: 300.w,
 
 
-                          decoration: BoxDecoration(
-                            color: Colors.blue,
-                            border: Border.all(
-                              color: Colors.black,
-                                width: 2.w
-                            )
-                          ),
-                          child: Padding(
-                            padding: const EdgeInsets.all(12.0),
-                            child: Center(
-                              child: Text('Login as Student',style: TextStyle(fontSize: 20.sp,color: Colors.white,fontWeight: FontWeight.bold),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          color: Colors.blue,
+                          border: Border.all(
+                            color: Colors.black,
+                              width: 2.w
+                          )
                         ),
-                            ),
-                          )),
+                        child: Padding(
+                          padding: const EdgeInsets.all(12.0),
+                          child: Center(
+                            child: Text('Login as Student',style: TextStyle(fontSize: 20.sp,color: Colors.white,fontWeight: FontWeight.bold),
                       ),
+                          ),
+                        )),
                     ),
                   ),
                   Padding(
                     padding: const EdgeInsets.all(8.0),
-                    child: ClipRRect(
-                      borderRadius: BorderRadius.circular(10),
-
-                      child: InkWell(
-                        onTap: (){
-                          Get.to(()=>HomePage());
-                        },
-                        child: Container(
-                          width: 300.w,
+                    child: InkWell(
+                      onTap: (){
+                        Get.to(()=>HomePage());
+                      },
+                      child: Container(
+                        width: 300.w,
 
 
 
-                          decoration: BoxDecoration(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
 
-                            border: Border.all(
-                              color: Colors.black,
-                              width: 2.w
-                            )
-                          ),
-                          child: Padding(
-                            padding: const EdgeInsets.all(12.0),
-                            child: Center(
-                              child: Text('Login as Parent',style: TextStyle(fontSize: 20.sp,color: Colors.blueAccent,fontWeight: FontWeight.bold),
+                          border: Border.all(
+                            color: Colors.black,
+                            width: 2.w
+                          )
                         ),
-                            ),
-                          )),
+                        child: Padding(
+                          padding: const EdgeInsets.all(12.0),
+                          child: Center(
+                            child: Text('Login as Parent',style: TextStyle(fontSize: 20.sp,color: Colors.blueAccent,fontWeight: FontWeight.bold),
                       ),
+                          ),
+                        )),
                     ),
                   ),
                 ]
