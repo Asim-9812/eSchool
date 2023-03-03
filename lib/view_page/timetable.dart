@@ -26,11 +26,11 @@ class _TimeTableState extends State<TimeTable> with TickerProviderStateMixin{
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           SizedBox(
-            height:20.h
+            height:60.h
           ),
           Text('Time Table',style : TextStyle(fontSize: 30.sp,fontWeight: FontWeight.bold,color: Colors.white)),
           SizedBox(
-              height:80.h
+              height:40.h
           ),
           Container(
             width: 300.w,
@@ -46,7 +46,7 @@ class _TimeTableState extends State<TimeTable> with TickerProviderStateMixin{
 
           Container(
             height: 50.h,
-            width: 280.h,
+            // width: 280.h,
             child: TabBar(
 
                 controller: _tabController,

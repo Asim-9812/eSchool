@@ -30,11 +30,11 @@ class _HomePageState extends State<HomePage> {
         children: [
           pages.elementAt(_index),
           Padding(
-            padding: const EdgeInsets.all(30.0),
+            padding: EdgeInsets.symmetric(horizontal : 30.w,vertical: 30.h),
             child: Align(
               alignment: Alignment(0.0,1.0),
               child: ClipRRect(
-                borderRadius: BorderRadius.circular(30),
+                borderRadius: BorderRadius.circular(30.sp),
                 child: BottomNavigationBar(
                   currentIndex: _index,
                   selectedItemColor: Colors.blue,
@@ -48,9 +48,9 @@ class _HomePageState extends State<HomePage> {
                     });
                   },
                   items:[
-                    BottomNavigationBarItem(icon: Icon(Icons.home_outlined),label:'Home'),
-                    BottomNavigationBarItem(icon: Icon(Icons.book_outlined),label:'Subjects'),
-                    BottomNavigationBarItem(icon: Icon(Icons.menu),label:'Menu'),
+                    BottomNavigationBarItem(icon: Icon(Icons.home_outlined,size: 25.sp,),label:'Home'),
+                    BottomNavigationBarItem(icon: Icon(Icons.book_outlined,size: 25.sp),label:'Subjects'),
+                    BottomNavigationBarItem(icon: Icon(Icons.menu,size: 25.sp),label:'Menu'),
                   ]
                 ),
               ),

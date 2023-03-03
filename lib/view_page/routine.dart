@@ -12,7 +12,7 @@ class Routine extends StatelessWidget {
 
       children: [
         Padding(
-          padding: const EdgeInsets.symmetric(vertical: 8.0),
+          padding:EdgeInsets.symmetric(vertical: 8.h),
           child: Container(
             height: 80.h,
             child: Card(
@@ -49,7 +49,7 @@ class Routine extends StatelessWidget {
           ),
         ),
         Padding(
-          padding: const EdgeInsets.symmetric(vertical: 8.0),
+          padding:EdgeInsets.symmetric(vertical: 8.h),
           child: Container(
             height: 80.h,
             child: Card(
@@ -86,7 +86,7 @@ class Routine extends StatelessWidget {
           ),
         ),
         Padding(
-          padding: const EdgeInsets.symmetric(vertical: 8.0),
+          padding:EdgeInsets.symmetric(vertical: 8.h),
           child: Container(
             height: 80.h,
             child: Card(
@@ -123,7 +123,7 @@ class Routine extends StatelessWidget {
           ),
         ),
         Padding(
-          padding: const EdgeInsets.symmetric(vertical: 8.0),
+          padding:EdgeInsets.symmetric(vertical: 8.h),
           child: Container(
             height: 80.h,
             child: Card(
@@ -160,7 +160,7 @@ class Routine extends StatelessWidget {
           ),
         ),
         Padding(
-          padding: const EdgeInsets.symmetric(vertical: 8.0),
+          padding:EdgeInsets.symmetric(vertical: 8.h),
           child: Container(
             height: 80.h,
             child: Card(
@@ -197,7 +197,7 @@ class Routine extends StatelessWidget {
           ),
         ),
         Padding(
-          padding: const EdgeInsets.symmetric(vertical: 8.0),
+          padding:EdgeInsets.symmetric(vertical: 8.h),
           child: Container(
             height: 80.h,
             child: Card(

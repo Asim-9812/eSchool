@@ -55,7 +55,7 @@ class _MenuPageState extends State<MenuPage> {
             Container(
               decoration: BoxDecoration(
                 color: Colors.white,
-                borderRadius: BorderRadius.vertical(top:Radius.circular(40))
+                borderRadius: BorderRadius.vertical(top:Radius.circular(40.sp))
               ),
               //
               height: 520.h,
@@ -64,7 +64,7 @@ class _MenuPageState extends State<MenuPage> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Padding(
-                      padding: const EdgeInsets.symmetric(horizontal:20.0,vertical:20),
+                      padding: EdgeInsets.symmetric(horizontal:20.w,vertical:20.h),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
@@ -73,14 +73,14 @@ class _MenuPageState extends State<MenuPage> {
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               Padding(
-                                padding: const EdgeInsets.all(8.0),
+                                padding: EdgeInsets.symmetric(vertical:8.h,horizontal:8.w),
                                 child: CircleAvatar(
                                   backgroundColor: Colors.black,
                                   radius: 40.sp,
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsets.all(8.0),
+                                padding: EdgeInsets.symmetric(vertical:8.h,horizontal:8.w),
                                 child: Column(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -107,8 +107,8 @@ class _MenuPageState extends State<MenuPage> {
                       height: 380.h,
                       child: GridView(
                         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                          childAspectRatio: 2/2.2,
-                            crossAxisCount: 3, mainAxisSpacing: 10,crossAxisSpacing: 5),
+                          childAspectRatio: 2.w/2.2.h,
+                            crossAxisCount: 3, mainAxisSpacing: 10.h,crossAxisSpacing: 5.w),
                         children: [
                           Column(
                             children: [
@@ -131,7 +131,7 @@ class _MenuPageState extends State<MenuPage> {
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsets.all(8.0),
+                                padding: EdgeInsets.symmetric(vertical:8.h,horizontal:8.w),
                                 child: Text('Attendance'),
                               )
                             ],
@@ -157,7 +157,7 @@ class _MenuPageState extends State<MenuPage> {
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsets.all(8.0),
+                                padding: EdgeInsets.symmetric(vertical:8.h,horizontal:8.w),
                                 child: Text('Timetable'),
                               )
                             ],
@@ -178,7 +178,7 @@ class _MenuPageState extends State<MenuPage> {
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsets.all(8.0),
+                                padding: EdgeInsets.symmetric(vertical:8.h,horizontal:8.w),
                                 child: Text('Notice'),
                               )
                             ],
@@ -199,7 +199,7 @@ class _MenuPageState extends State<MenuPage> {
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsets.all(8.0),
+                                padding: EdgeInsets.symmetric(vertical:8.h,horizontal:8.w),
                                 child: Text('Profile'),
                               )
                             ],
@@ -220,7 +220,7 @@ class _MenuPageState extends State<MenuPage> {
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsets.all(8.0),
+                                padding: EdgeInsets.symmetric(vertical:8.h,horizontal:8.w),
                                 child: Text('Holidays'),
                               )
                             ],
@@ -241,7 +241,7 @@ class _MenuPageState extends State<MenuPage> {
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsets.all(8.0),
+                                padding: EdgeInsets.symmetric(vertical:8.h,horizontal:8.w),
                                 child: Text('Settings'),
                               )
                             ],

@@ -12,7 +12,7 @@ class UserPage extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         ClipRRect(
-          borderRadius: BorderRadius.vertical(bottom:Radius.circular(30)),
+          borderRadius: BorderRadius.vertical(bottom:Radius.circular(30.sp)),
           child: Stack(
               children:[ Container(
                 color: Colors.blue,
@@ -20,20 +20,20 @@ class UserPage extends StatelessWidget {
                 width: double.infinity,
                 child: Center(
                   child: Padding(
-                    padding: const EdgeInsets.only(left: 30.0,top: 60),
+                    padding: EdgeInsets.only(left: 30.w,top: 60.h),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         Padding(
-                          padding: const EdgeInsets.all(8.0),
+                          padding : EdgeInsets.symmetric(horizontal : 8.w,vertical : 8.h),
                           child: CircleAvatar(
                             backgroundColor: Colors.black,
                             radius: 30.sp,
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsets.all(8.0),
+                          padding : EdgeInsets.symmetric(horizontal : 8.w,vertical : 8.h),
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -75,8 +75,8 @@ class UserPage extends StatelessWidget {
                     ),
                     color: Colors.grey,
                     child: SizedBox(
-                      width: 350,
-                      height: 200,
+                      width: 350.w,
+                      height: 200.h,
                       child: Center(child: Text('Exam Date... ')),
                     ),
                   ),
@@ -88,7 +88,7 @@ class UserPage extends StatelessWidget {
           height: 20.h,
         ),
         Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding : EdgeInsets.symmetric(horizontal : 8.w,vertical : 8.h),
           child: Text('My Subjects',style:TextStyle(fontSize: 30.sp,fontWeight : FontWeight.bold,color: Colors.black) ),
         ),
         Container(
@@ -96,8 +96,8 @@ class UserPage extends StatelessWidget {
           width: double.infinity,
           child: GridView(
             gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-              childAspectRatio: 2/2.2,
-                crossAxisCount: 3, mainAxisSpacing: 5,crossAxisSpacing: 5),
+              childAspectRatio: 2.w/2.2.h,
+                crossAxisCount: 3, mainAxisSpacing: 5.h,crossAxisSpacing: 5.w),
             children: [
               Column(
                 children: [
@@ -112,7 +112,7 @@ class UserPage extends StatelessWidget {
                       ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.all(8.0),
+                    padding : EdgeInsets.symmetric(horizontal : 8.w,vertical : 8.h),
                     child: Text('English'),
                   )
                 ],
@@ -131,7 +131,7 @@ class UserPage extends StatelessWidget {
                   ),
                   Padding(
 
-                    padding: const EdgeInsets.all(8.0),
+                    padding : EdgeInsets.symmetric(horizontal : 8.w,vertical : 8.h),
                     child: Text('Social'),
                   )
                 ],
@@ -149,7 +149,7 @@ class UserPage extends StatelessWidget {
                       ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.all(8.0),
+                    padding : EdgeInsets.symmetric(horizontal : 8.w,vertical : 8.h),
                     child: Text('Nepali'),
                   )
                 ],
@@ -167,7 +167,7 @@ class UserPage extends StatelessWidget {
                       ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.all(8.0),
+                    padding : EdgeInsets.symmetric(horizontal : 8.w,vertical : 8.h),
                     child: Text('Chemistry'),
                   )
                 ],
@@ -185,7 +185,7 @@ class UserPage extends StatelessWidget {
                       ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.all(8.0),
+                    padding : EdgeInsets.symmetric(horizontal : 8.w,vertical : 8.h),
                     child: Text('Biology'),
                   )
                 ],
@@ -203,7 +203,7 @@ class UserPage extends StatelessWidget {
                       ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.all(8.0),
+                    padding : EdgeInsets.symmetric(horizontal : 8.w,vertical : 8.h),
                     child: Text('Sports'),
                   )
                 ],
@@ -221,7 +221,7 @@ class UserPage extends StatelessWidget {
                       ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.all(8.0),
+                    padding : EdgeInsets.symmetric(horizontal : 8.w,vertical : 8.h),
                     child: Text('Math'),
                   )
                 ],
@@ -239,7 +239,7 @@ class UserPage extends StatelessWidget {
                       ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.all(8.0),
+                    padding : EdgeInsets.symmetric(horizontal : 8.w,vertical : 8.h),
                     child: Text('physics'),
                   )
                 ],

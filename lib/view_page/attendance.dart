@@ -68,11 +68,7 @@ class _AttendanceState extends State<Attendance> {
                   onPressed: (){
 
                     setState(() {
-                      mySelectedEvents[DateFormat('yyyy-MM-dd').format(_selectedDate!)]=[
-                        {
-                          'absent':true
-                        }
-                      ];
+                      mySelectedEvents[DateFormat('yyyy-MM-dd').format(_selectedDate!)]= [];
                     });
                     Navigator.pop(context);
 
@@ -98,107 +94,112 @@ class _AttendanceState extends State<Attendance> {
         SizedBox(
             height:40.h
         ),
-        Stack(
+        Container(
+          // color:Colors.red,
+        width:320.w,
+        height: 360.h,
+        child: Stack(
           children:[
+
             Positioned(
               top: 5.h,
-              child: Container(
-                // color: Colors.white,
-                child: Center(
-                  child: Card(
-                    elevation: 5,
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20)
-                    ),
-                    child: SizedBox(
-                      width: 320.w,
-                      height: 65.h,
+              child: Column(
+                children: [
+                  Container(
+                    // color: Colors.white,
+                    child: Center(
+                      child: Card(
+                        elevation: 5,
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20)
+                        ),
+                        child: SizedBox(
+                          width: 310.w,
+                          height: 60.h,
+                        ),
+                      ),
                     ),
                   ),
-                ),
+                  Container(
+                    // color: Colors.white,
+                    child: Center(
+                      child: Card(
+                        elevation: 5,
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20)
+                        ),
+                        child: SizedBox(
+                          width: 315.w,
+                          height: 275.h,
+                        ),
+                      ),
+                    ),
+                  )
+                ],
               ),
             ),
-            Positioned(
-              top: 80.h,
-              child: Container(
-                // color: Colors.white,
-                child: Center(
-                  child: Card(
-                    elevation: 5,
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20)
-                    ),
-                    child: SizedBox(
-                      width: 320.w,
-                      height: 270.h,
-                    ),
-                  ),
-                ),
+
+
+            TableCalendar(
+              daysOfWeekHeight: 20.h,
+            // shouldFillViewport: true,
+            rowHeight: 40.h,
+            eventLoader: _attendance,
+              onDaySelected: (selectedDay, focusedDay) {
+                if (!isSameDay (_selectedDate, selectedDay)) {
+                  // Call `setState()` when updating the selected day
+                  setState(() {
+                    _selectedDate = selectedDay;
+                    _focusedDay = focusedDay;
+                  });
+                }
+              },
+              selectedDayPredicate: (day){
+                return isSameDay(_selectedDate,day);
+              },
+              onPageChanged: (focusedDay){
+                _focusedDay=focusedDay;
+              },
+              daysOfWeekStyle: DaysOfWeekStyle(
+                weekdayStyle: TextStyle(color:Colors.blueAccent,fontWeight: FontWeight.bold,fontSize: 20.sp),
+                weekendStyle: TextStyle(color:Colors.blueAccent,fontWeight: FontWeight.bold,fontSize: 20.sp)
               ),
-            ),
+              focusedDay: _focusedDay,
+              firstDay: DateTime.utc(2021,01,01),
+              lastDay: DateTime.utc(2024,12,12),
+              headerStyle: HeaderStyle(
+                formatButtonVisible: false,
+                headerMargin: EdgeInsets.only(left:10.w,right:10.w,top:10.h,bottom:20.h),
+                titleCentered: true,
+                titleTextStyle: TextStyle(fontWeight: FontWeight.bold),
 
-            Container(
-            
-            width: 330.w,
-            child: TableCalendar(
-              eventLoader: _attendance,
-                onDaySelected: (selectedDay, focusedDay) {
-                  if (!isSameDay (_selectedDate, selectedDay)) {
-                    // Call `setState()` when updating the selected day
-                    setState(() {
-                      _selectedDate = selectedDay;
-                      _focusedDay = focusedDay;
-                    });
-                  }
-                },
-                selectedDayPredicate: (day){
-                  return isSameDay(_selectedDate,day);
-                },
-                onPageChanged: (focusedDay){
-                  _focusedDay=focusedDay;
-                },
-                daysOfWeekStyle: DaysOfWeekStyle(
-                  weekdayStyle: TextStyle(color:Colors.blueAccent,fontWeight: FontWeight.bold,fontSize: 20.sp),
-                  weekendStyle: TextStyle(color:Colors.blueAccent,fontWeight: FontWeight.bold,fontSize: 20.sp)
+              ),
+              calendarStyle: CalendarStyle(
+
+                markerSize: 25.sp,
+                markerDecoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(100),
+                  color: Colors.green.withOpacity(0.7)
                 ),
-                focusedDay: _focusedDay,
-                firstDay: DateTime.utc(2021,01,01),
-                lastDay: DateTime.utc(2024,12,12),
-                headerStyle: HeaderStyle(
-                  formatButtonVisible: false,
-                  headerMargin: EdgeInsets.all(10),
-                  titleCentered: true,
-                  titleTextStyle: TextStyle(fontWeight: FontWeight.bold),
-
-                ),
-                calendarStyle: CalendarStyle(
-                  markerSize: 25.sp,
-                  markerDecoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(100),
-                    color: Colors.green.withOpacity(0.7)
-                  ),
-                  markersAutoAligned: false,
-                  markersAlignment: Alignment.center,
-                  cellMargin: EdgeInsets.all(10),
-
-                  outsideDaysVisible: false,
-                  tablePadding: EdgeInsets.symmetric(horizontal:10),
+                markersAutoAligned: false,
+                markersAlignment: Alignment.center,
+                // cellMargin: EdgeInsets.all(10),
 
 
-                ),
+                outsideDaysVisible: false,
+                // tablePadding: EdgeInsets.symmetric(horizontal:10),
 
 
-                
-            )
+              ),
+
+
+
+          ),]
+        )
           ),
 
-
-
-          ]
-        ),
-
         SizedBox(
-            height:40.h
+            height:30.h
         ),
 
         Container(
@@ -260,7 +261,7 @@ class _AttendanceState extends State<Attendance> {
               child: Card(
                 elevation: 10,
                   shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(100),
+                    borderRadius: BorderRadius.circular(100.sp),
                   ),
                   child: Center(
                       child: Icon(Icons.add,color: Colors.black,)
