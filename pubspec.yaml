@@ -42,6 +42,7 @@ dependencies:
   flutter_native_splash: ^2.2.16
   card_swiper: ^2.0.4
   table_calendar: ^3.0.9
+  google_fonts: ^4.0.3
 
 flutter_native_splash:
   color: "#205578"
@@ -81,6 +82,8 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
    - assets/images/
+   - assets/icons/
+   - assets/google_fonts/nunito/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
