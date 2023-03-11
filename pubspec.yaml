@@ -43,6 +43,8 @@ dependencies:
   card_swiper: ^2.0.4
   table_calendar: ^3.0.9
   google_fonts: ^4.0.3
+  eva_icons_flutter: ^3.1.0
+  icon_decoration: ^1.0.1
 
 flutter_native_splash:
   color: "#205578"

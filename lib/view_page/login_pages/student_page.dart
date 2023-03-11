@@ -1,5 +1,6 @@
 
 import 'package:eschool/constants/colors.dart';
+import 'package:eschool/view_page/homepage_student/default_page.dart';
 import 'package:eschool/view_page/login_pages/parent_login.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -44,9 +45,9 @@ class _Student_loginState extends State<Student_login> {
       body: Stack(
         children: [
           AnimatedContainer(
-            duration: Duration(milliseconds: 500),
+            duration: Duration(milliseconds: 700),
             alignment: Alignment(boxX, boxY),
-            curve: Curves.bounceIn,
+            curve: Curves.decelerate,
             child: Container(
               height: 150.h,
               width: 300.w,
@@ -55,9 +56,9 @@ class _Student_loginState extends State<Student_login> {
           ),
 
           AnimatedContainer(
-            duration: Duration(milliseconds: 500),
+            duration: Duration(milliseconds: 700),
             alignment: Alignment(boxX1, boxY1),
-            curve: Curves.bounceIn,
+            curve: Curves.decelerate,
             child: Container(
               height: 150.h,
               width: 300.w,
@@ -181,7 +182,9 @@ class _Student_loginState extends State<Student_login> {
                                         )
                                     )
                                 ),
-                                onPressed: (){},
+                                onPressed: (){
+                                  Get.to(()=>DefaultPage());
+                                },
                                 child: Padding(
                                   padding: EdgeInsets.symmetric(vertical: 5.h,horizontal: 8.w),
                                   child: Text('Sign In',style: TextStyle(fontSize: 25.sp,),),
