@@ -44,7 +44,7 @@ class _Parent_loginState extends State<Parent_login> {
       body: Stack(
         children: [
           AnimatedContainer(
-            duration: Duration(milliseconds: 500),
+            duration: Duration(milliseconds: 700),
             alignment: Alignment(boxX, boxY),
             curve: Curves.bounceIn,
             child: Container(
@@ -55,7 +55,7 @@ class _Parent_loginState extends State<Parent_login> {
           ),
 
           AnimatedContainer(
-            duration: Duration(milliseconds: 500),
+            duration: Duration(milliseconds: 700),
             alignment: Alignment(boxX1, boxY1),
             curve: Curves.bounceIn,
             child: Container(

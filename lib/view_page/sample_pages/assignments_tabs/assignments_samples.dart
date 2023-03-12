@@ -14,7 +14,7 @@ class Assignments extends StatelessWidget {
         Padding(
           padding:EdgeInsets.symmetric(vertical: 8.h),
           child: Container(
-            height: 120.h,
+            height: 110.h,
 
             child: Stack(
               children:[
@@ -24,27 +24,21 @@ class Assignments extends StatelessWidget {
                   child: Padding(
                     padding: EdgeInsets.only(right: 8.w),
                     child: Container(
-                    width: 320.w,
+                    width: 300.w,
                     child: Card(
-                      color: Colors.white54,
+                      color: Colors.white60,
                       shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(30)
+                        borderRadius: BorderRadius.circular(20)
                       ),
                       child: Padding(
-                        padding: EdgeInsets.symmetric(vertical: 8.h,horizontal: 40.w),
+                        padding: EdgeInsets.symmetric(vertical: 8.h,horizontal: 35.w),
                         child: ListTile(
                           title: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween ,
                             children: [
-                              Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-
-                                  Text('TASK 1',style:TextStyle(color: Colors.black,fontWeight: FontWeight.bold)),
-                                  Text('QUESTIONS',style:TextStyle(color: Colors.black)),
-                                ],
-                              ),
+                              Text('TASK 1',style:TextStyle(color: Colors.black,fontWeight: FontWeight.bold)),
+                              Text('QUESTIONS',style:TextStyle(color: Colors.black)),
+                              SizedBox(height: 20.h,),
                               Text('DUE DATE',style:TextStyle(color: Colors.black,fontSize: 10.sp))
                             ],
                           ),
@@ -60,11 +54,11 @@ class Assignments extends StatelessWidget {
                   alignment: Alignment(-0.95, 0),
                   child: Container(
                       decoration: BoxDecoration(
-                          color:  Colors.blue,
-                          borderRadius: BorderRadius.circular(20)
+                          color:  Colors.lightBlueAccent,
+                          borderRadius: BorderRadius.circular(10)
                       ),
-                      height: 90.h,
-                      width: 90.w
+                      height: 70.h,
+                      width: 80.w
                   ),
                 ),
 
@@ -75,7 +69,7 @@ class Assignments extends StatelessWidget {
         Padding(
           padding:EdgeInsets.symmetric(vertical: 8.h),
           child: Container(
-            height: 120.h,
+            height: 110.h,
 
             child: Stack(
               children:[
@@ -85,30 +79,25 @@ class Assignments extends StatelessWidget {
                   child: Padding(
                     padding: EdgeInsets.only(right: 8.w),
                     child: Container(
-                    width: 320.w,
+                    width: 300.w,
                     child: Card(
-                      color: Colors.white54,
+                      color: Colors.white60,
                       shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(30)
+                        borderRadius: BorderRadius.circular(20)
                       ),
                       child: Padding(
-                        padding: EdgeInsets.symmetric(vertical: 8.h,horizontal: 40.w),
+                        padding: EdgeInsets.symmetric(vertical: 8.h,horizontal: 35.w),
                         child: ListTile(
                           title: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween ,
                             children: [
-                              Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-
-                                  Text('TASK 2',style:TextStyle(color: Colors.black,fontWeight: FontWeight.bold)),
-                                  Text('QUESTIONS',style:TextStyle(color: Colors.black)),
-                                ],
-                              ),
+                              Text('TASK 2',style:TextStyle(color: Colors.black,fontWeight: FontWeight.bold)),
+                              Text('QUESTIONS',style:TextStyle(color: Colors.black)),
+                              SizedBox(height: 20.h,),
                               Text('DUE DATE',style:TextStyle(color: Colors.black,fontSize: 10.sp))
                             ],
                           ),
+
 
                         ),
                       ),
@@ -121,10 +110,10 @@ class Assignments extends StatelessWidget {
                   child: Container(
                       decoration: BoxDecoration(
                           color:  Colors.greenAccent,
-                          borderRadius: BorderRadius.circular(20)
+                          borderRadius: BorderRadius.circular(10)
                       ),
-                      height: 90.h,
-                      width: 90.w
+                      height: 70.h,
+                      width: 80.w
                   ),
                 ),
 
@@ -135,7 +124,7 @@ class Assignments extends StatelessWidget {
         Padding(
           padding:EdgeInsets.symmetric(vertical: 8.h),
           child: Container(
-            height: 120.h,
+            height: 110.h,
 
             child: Stack(
               children:[
@@ -145,30 +134,26 @@ class Assignments extends StatelessWidget {
                   child: Padding(
                     padding: EdgeInsets.only(right: 8.w),
                     child: Container(
-                    width: 320.w,
+                    width: 300.w,
                     child: Card(
-                      color: Colors.white54,
+                      color: Colors.white60,
                       shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(30)
+                        borderRadius: BorderRadius.circular(20)
                       ),
                       child: Padding(
-                        padding: EdgeInsets.symmetric(vertical: 8.h,horizontal: 40.w),
+                        padding: EdgeInsets.symmetric(vertical: 8.h,horizontal: 35.w),
                         child: ListTile(
                           title: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween ,
                             children: [
-                              Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-
-                                  Text('TASK 3',style:TextStyle(color: Colors.black,fontWeight: FontWeight.bold)),
-                                  Text('QUESTIONS',style:TextStyle(color: Colors.black)),
-                                ],
-                              ),
+                              Text('TASK 3',style:TextStyle(color: Colors.black,fontWeight: FontWeight.bold)),
+                              Text('QUESTIONS',style:TextStyle(color: Colors.black)),
+                              SizedBox(height: 20.h,),
                               Text('DUE DATE',style:TextStyle(color: Colors.black,fontSize: 10.sp))
                             ],
                           ),
+
+
                         ),
                       ),
                     ),
@@ -180,10 +165,10 @@ class Assignments extends StatelessWidget {
                   child: Container(
                       decoration: BoxDecoration(
                           color:  Colors.redAccent,
-                          borderRadius: BorderRadius.circular(20)
+                          borderRadius: BorderRadius.circular(10)
                       ),
-                      height: 90.h,
-                      width: 90.w
+                      height: 70.h,
+                      width: 80.w
                   ),
                 ),
 
@@ -194,7 +179,7 @@ class Assignments extends StatelessWidget {
         Padding(
           padding:EdgeInsets.symmetric(vertical: 8.h),
           child: Container(
-            height: 120.h,
+            height: 110.h,
 
             child: Stack(
               children:[
@@ -204,30 +189,26 @@ class Assignments extends StatelessWidget {
                   child: Padding(
                     padding: EdgeInsets.only(right: 8.w),
                     child: Container(
-                    width: 320.w,
+                    width: 300.w,
                     child: Card(
-                      color: Colors.white54,
+                      color: Colors.white60,
                       shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(30)
+                        borderRadius: BorderRadius.circular(20)
                       ),
                       child: Padding(
-                        padding: EdgeInsets.symmetric(vertical: 20.h,horizontal: 40.w),
+                        padding: EdgeInsets.symmetric(vertical: 8.h,horizontal: 35.w),
                         child: ListTile(
                           title: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween ,
                             children: [
-                              Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-
-                                  Text('TASK 4',style:TextStyle(color: Colors.black,fontWeight: FontWeight.bold)),
-                                  Text('QUESTIONS',style:TextStyle(color: Colors.black)),
-                                ],
-                              ),
+                              Text('TASK 4',style:TextStyle(color: Colors.black,fontWeight: FontWeight.bold)),
+                              Text('QUESTIONS',style:TextStyle(color: Colors.black)),
+                              SizedBox(height: 20.h,),
                               Text('DUE DATE',style:TextStyle(color: Colors.black,fontSize: 10.sp))
                             ],
                           ),
+
+
                         ),
                       ),
                     ),
@@ -238,11 +219,11 @@ class Assignments extends StatelessWidget {
                   alignment: Alignment(-0.95, 0),
                   child: Container(
                       decoration: BoxDecoration(
-                          color:  Colors.orangeAccent,
-                          borderRadius: BorderRadius.circular(20)
+                          color:  Colors.deepOrangeAccent,
+                          borderRadius: BorderRadius.circular(10)
                       ),
-                      height: 90.h,
-                      width: 90.w
+                      height: 70.h,
+                      width: 80.w
                   ),
                 ),
 
@@ -250,6 +231,7 @@ class Assignments extends StatelessWidget {
             ),
           ),
         ),
+
         SizedBox(
           height:200.h
         )

@@ -27,22 +27,26 @@ class _TimeTableState extends State<TimeTable> with TickerProviderStateMixin{
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           SizedBox(
-              height:50.h
+              height:40.h
           ),
           Text('Time Table',style : TextStyle(fontSize: 30.sp,color: Colors.white)),
           SizedBox(
-              height:40.h
+              height:30.h
           ),
           Padding(
             padding: EdgeInsets.only(bottom: 15.h),
             child: Container(
-              width: 320.w,
-              height: 70.h,
+
+              width: 350.w,
+              height: 60.h,
               child: Card(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10)
+                ),
                 color: Colors.white,
                 elevation: 3,
                 child: Center(
-                    child: Text('Class 9-A',style: TextStyle(fontSize: 25.sp,color: Colors.black),)
+                    child: Text('Class 9-A',style: TextStyle(fontSize: 20.sp,color: Colors.black),)
                 ),
 
               ),

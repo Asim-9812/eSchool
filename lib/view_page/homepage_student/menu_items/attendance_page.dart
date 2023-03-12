@@ -93,12 +93,12 @@ class _AttendanceState extends State<Attendance> {
         ),
         Text('Attendance',style : TextStyle(fontSize: 30.sp,color: Colors.white)),
         SizedBox(
-            height:40.h
+            height:30.h
         ),
         Container(
           // color:Colors.red,
             width:350.w,
-            height: 370.h,
+            height: 430.h,
             child: Stack(
                 children:[
 
@@ -117,7 +117,7 @@ class _AttendanceState extends State<Attendance> {
                               ),
                               child: SizedBox(
                                 width: 340.w,
-                                height: 70.h,
+                                height: 60.h,
                               ),
                             ),
                           ),
@@ -133,7 +133,7 @@ class _AttendanceState extends State<Attendance> {
                               ),
                               child: SizedBox(
                                 width: 340.w,
-                                height: 275.h,
+                                height: 330.h,
                               ),
                             ),
                           ),
@@ -146,7 +146,7 @@ class _AttendanceState extends State<Attendance> {
                   TableCalendar(
                     daysOfWeekHeight: 20.h,
                     // shouldFillViewport: true,
-                    rowHeight: 40.h,
+                    rowHeight: 50.h,
                     eventLoader: _attendance,
                     onDaySelected: (selectedDay, focusedDay) {
                       if (!isSameDay (_selectedDate, selectedDay)) {
@@ -203,9 +203,7 @@ class _AttendanceState extends State<Attendance> {
             )
         ),
 
-        SizedBox(
-            height:30.h
-        ),
+
 
         Container(
             width: 340.w,

@@ -2,7 +2,7 @@
 
 
 import 'package:eschool/constants/colors.dart';
-import 'package:eschool/view_page/sample_pages/assignments_tabs.dart';
+import 'package:eschool/view_page/sample_pages/assignments_tabs/assignments_tabs.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -26,13 +26,14 @@ class _AssignmentPageState extends State<AssignmentPage> with TickerProviderStat
             child: Column(
               children: [
                 SizedBox(
-                  height: 150.h,
+                  height: 130.h,
                 ),
                 Container(
                   height: 720.h,
                   child: Padding(
-                    padding: const EdgeInsets.all(8.0),
+                    padding: EdgeInsets.symmetric(vertical: 0.h,horizontal: 20.w),
                     child: TabBarView(
+
                       controller: _tabController,
                       children: [
                         AssignmentTabs(),
@@ -46,7 +47,7 @@ class _AssignmentPageState extends State<AssignmentPage> with TickerProviderStat
           ),
 
           Container(
-            height: 220.h,
+            height: 200.h,
             width: double.infinity,
             decoration: BoxDecoration(
                 color: bgColor,
@@ -55,15 +56,21 @@ class _AssignmentPageState extends State<AssignmentPage> with TickerProviderStat
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
+                SizedBox(
+                  height: 20.h,
+                ),
                 Text('Assignments',style:TextStyle(color: Colors.white,fontSize: 30.sp,fontWeight: FontWeight.bold)),
+                SizedBox(
+                  height: 10.h,
+                ),
                 TabBar(
 
                     controller: _tabController,
                     padding: EdgeInsets.symmetric(vertical: 15.h,horizontal: 30.w),
 
-                    labelStyle: TextStyle(fontSize: 20.sp,fontWeight: FontWeight.bold),
-                    unselectedLabelStyle: TextStyle(fontSize: 20.sp,fontWeight: FontWeight.bold),
-                    isScrollable: true,
+                    labelStyle: TextStyle(fontSize: 20.sp,),
+                    unselectedLabelStyle: TextStyle(fontSize: 20.sp,),
+                    isScrollable: false,
                     labelPadding: EdgeInsets.only(left: 15.w, right: 15.w),
                     labelColor: primary,
                     unselectedLabelColor: Colors.white,

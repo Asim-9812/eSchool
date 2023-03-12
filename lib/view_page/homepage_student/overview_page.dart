@@ -4,6 +4,8 @@ import 'package:card_swiper/card_swiper.dart';
 import 'package:eschool/constants/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
+import 'package:eschool/view_page/sample_pages/subject_samples/subjects_page.dart';
 
 class OverviewPage extends StatefulWidget {
 
@@ -80,11 +82,14 @@ class _OverviewPageState extends State<OverviewPage> {
                       GridTile(
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(20),
-                          child: Container(
-                            height: 90.h,
-                            width: 90.w,
-                            color: Colors.lightBlueAccent,
-                            child: Center(child: Image.asset('assets/icons/maths.png',width: 50.w,height: 50.h))
+                          child: InkWell(
+                            onTap: ()=> Get.to(()=>Subjects()),
+                            child: Container(
+                              height: 90.h,
+                              width: 90.w,
+                              color: Colors.lightBlueAccent,
+                              child: Center(child: Image.asset('assets/icons/maths.png',width: 50.w,height: 50.h))
+                            ),
                           ),
                         ),
                       ),
@@ -100,11 +105,14 @@ class _OverviewPageState extends State<OverviewPage> {
                       GridTile(
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(20),
-                          child: Container(
-                            height: 90.h,
-                            width: 90.w,
-                            color: Colors.redAccent,
-                            child: Center(child: Image.asset('assets/icons/science.png',width: 50.w,height: 50.h))
+                          child: InkWell(
+                            onTap: ()=> Get.to(()=>Subjects()),
+                            child: Container(
+                              height: 90.h,
+                              width: 90.w,
+                              color: Colors.redAccent,
+                              child: Center(child: Image.asset('assets/icons/science.png',width: 50.w,height: 50.h))
+                            ),
                           ),
                         ),
                       ),
@@ -120,11 +128,14 @@ class _OverviewPageState extends State<OverviewPage> {
                       GridTile(
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(20),
-                          child: Container(
-                            height: 90.h,
-                            width: 90.w,
-                            color: Colors.orangeAccent,
-                            child: Center(child: Image.asset('assets/icons/english.png',width: 50.w,height: 50.h))
+                          child: InkWell(
+                            onTap: ()=> Get.to(()=>Subjects()),
+                            child: Container(
+                              height: 90.h,
+                              width: 90.w,
+                              color: Colors.orangeAccent,
+                              child: Center(child: Image.asset('assets/icons/english.png',width: 50.w,height: 50.h))
+                            ),
                           ),
                         ),
                       ),
@@ -140,11 +151,14 @@ class _OverviewPageState extends State<OverviewPage> {
                       GridTile(
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(20),
-                          child: Container(
-                            height: 90.h,
-                            width: 90.w,
-                            color: Colors.deepPurpleAccent,
-                            child: Center(child: Image.asset('assets/icons/accounting.png',width: 50.w,height: 50.h))
+                          child: InkWell(
+                            onTap: ()=> Get.to(()=>Subjects()),
+                            child: Container(
+                              height: 90.h,
+                              width: 90.w,
+                              color: Colors.deepPurpleAccent,
+                              child: Center(child: Image.asset('assets/icons/accounting.png',width: 50.w,height: 50.h))
+                            ),
                           ),
                         ),
                       ),
@@ -160,11 +174,14 @@ class _OverviewPageState extends State<OverviewPage> {
                       GridTile(
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(20),
-                          child: Container(
-                            height: 90.h,
-                            width: 90.w,
-                            color: Colors.blue,
-                            child: Center(child: Image.asset('assets/icons/computer.png',width: 50.w,height: 50.h))
+                          child: InkWell(
+                            onTap: ()=> Get.to(()=>Subjects()),
+                            child: Container(
+                              height: 90.h,
+                              width: 90.w,
+                              color: Colors.blue,
+                              child: Center(child: Image.asset('assets/icons/computer.png',width: 50.w,height: 50.h))
+                            ),
                           ),
                         ),
                       ),
@@ -180,11 +197,14 @@ class _OverviewPageState extends State<OverviewPage> {
                       GridTile(
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(20),
-                          child: Container(
-                            height: 90.h,
-                            width: 90.w,
-                            color: Colors.pinkAccent,
-                            child: Center(child: Image.asset('assets/icons/drawing.png',width: 50.w,height: 50.h))
+                          child: InkWell(
+                            onTap: ()=> Get.to(()=>Subjects()),
+                            child: Container(
+                              height: 90.h,
+                              width: 90.w,
+                              color: Colors.pinkAccent,
+                              child: Center(child: Image.asset('assets/icons/drawing.png',width: 50.w,height: 50.h))
+                            ),
                           ),
                         ),
                       ),
@@ -200,11 +220,14 @@ class _OverviewPageState extends State<OverviewPage> {
                       GridTile(
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(20),
-                          child: Container(
-                            height: 90.h,
-                            width: 90.w,
-                            color: Colors.deepOrangeAccent,
-                            child: Center(child: Image.asset('assets/icons/music.png',width: 50.w,height: 50.h))
+                          child: InkWell(
+                            onTap: ()=> Get.to(()=>Subjects()),
+                            child: Container(
+                              height: 90.h,
+                              width: 90.w,
+                              color: Colors.deepOrangeAccent,
+                              child: Center(child: Image.asset('assets/icons/music.png',width: 50.w,height: 50.h))
+                            ),
                           ),
                         ),
                       ),

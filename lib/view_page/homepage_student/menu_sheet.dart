@@ -2,7 +2,14 @@
 
 import 'package:eschool/constants/colors.dart';
 import 'package:eschool/view_page/homepage_student/menu_items/attendance_page.dart';
+import 'package:eschool/view_page/homepage_student/menu_items/exam_page.dart';
+import 'package:eschool/view_page/homepage_student/menu_items/holidays_page.dart';
+import 'package:eschool/view_page/homepage_student/menu_items/parent_profile.dart';
+import 'package:eschool/view_page/homepage_student/menu_items/notice_page.dart';
+import 'package:eschool/view_page/homepage_student/menu_items/report_page.dart';
+import 'package:eschool/view_page/homepage_student/menu_items/result_page.dart';
 import 'package:eschool/view_page/homepage_student/menu_items/timetable_page.dart';
+import 'package:eschool/view_page/homepage_student/menu_items/settings_page.dart';
 import 'package:eschool/view_page/login_pages/parent_login.dart';
 import 'package:eschool/view_page/login_pages/student_page.dart';
 import 'package:eva_icons_flutter/eva_icons_flutter.dart';
@@ -23,6 +30,13 @@ class _MenuPageState extends State<MenuPage> {
   double boxY= 10;
   var _showContainer;
   var _showContainer2;
+  var _showContainer3;
+  var _showContainer4;
+  var _showContainer5;
+  var _showContainer6;
+  var _showContainer7;
+  var _showContainer8;
+  var _showContainer9;
 
 
   @override
@@ -35,6 +49,13 @@ class _MenuPageState extends State<MenuPage> {
     }));
     _showContainer = false;
     _showContainer2 = false;
+    _showContainer3 = false;
+    _showContainer4 = false;
+    _showContainer5 = false;
+    _showContainer6 = false;
+    _showContainer7 = false;
+    _showContainer8 = false;
+    _showContainer9 = false;
   }
 
   void show() {
@@ -45,6 +66,41 @@ class _MenuPageState extends State<MenuPage> {
   void show2() {
     setState(() {
       _showContainer2 = !_showContainer2;
+    });
+  }
+  void show3() {
+    setState(() {
+      _showContainer3 = !_showContainer3;
+    });
+  }
+  void show4() {
+    setState(() {
+      _showContainer4 = !_showContainer4;
+    });
+  }
+  void show5() {
+    setState(() {
+      _showContainer5 = !_showContainer5;
+    });
+  }
+  void show6() {
+    setState(() {
+      _showContainer6 = !_showContainer6;
+    });
+  }
+  void show7() {
+    setState(() {
+      _showContainer7 = !_showContainer7;
+    });
+  }
+  void show8() {
+    setState(() {
+      _showContainer8 = !_showContainer8;
+    });
+  }
+  void show9() {
+    setState(() {
+      _showContainer9 = !_showContainer9;
     });
   }
 
@@ -136,7 +192,7 @@ class _MenuPageState extends State<MenuPage> {
                             borderRadius: BorderRadius.circular(15)
                           ),
                           child: Center(
-                              child:Icon(EvaIcons.calendarOutline,size: 45.sp,color:Color(0xff6baa90))
+                              child:Image.asset('assets/icons/attendance.png',width: 50.w,height: 50.h,)
                           ),
                         ),
                       ),
@@ -162,7 +218,7 @@ class _MenuPageState extends State<MenuPage> {
                             borderRadius: BorderRadius.circular(15)
                           ),
                           child: Center(
-                              child:Icon(EvaIcons.clockOutline,size: 45.sp,color:Color(0xff6baa90))
+                              child:Image.asset('assets/icons/timetable.png',width: 60.w,height: 50.h,)
                           ),
                         ),
                       ),
@@ -178,7 +234,7 @@ class _MenuPageState extends State<MenuPage> {
                       GridTile(
                       child: InkWell(
                         onTap: (){
-                          // show();
+                          show3();
                         },
                         child: Container(
                           height: 80.h,
@@ -188,7 +244,7 @@ class _MenuPageState extends State<MenuPage> {
                             borderRadius: BorderRadius.circular(15)
                           ),
                           child: Center(
-                              child:Icon(EvaIcons.clipboardOutline,size: 45.sp,color:Color(0xff6baa90))
+                              child:Image.asset('assets/icons/noticeboard.png',width: 60.w,height: 50.h,)
                           ),
                         ),
                       ),
@@ -204,7 +260,7 @@ class _MenuPageState extends State<MenuPage> {
                       GridTile(
                       child: InkWell(
                         onTap: (){
-                          // show();
+                          show4();
                         },
                         child: Container(
                           height: 80.h,
@@ -214,7 +270,7 @@ class _MenuPageState extends State<MenuPage> {
                             borderRadius: BorderRadius.circular(15)
                           ),
                           child: Center(
-                              child:Icon(EvaIcons.fileOutline,size: 45.sp,color:Color(0xff6baa90))
+                              child:Image.asset('assets/icons/exam.png',width: 60.w,height: 50.h,)
                           ),
                         ),
                       ),
@@ -230,7 +286,7 @@ class _MenuPageState extends State<MenuPage> {
                       GridTile(
                       child: InkWell(
                         onTap: (){
-                          // show();
+                          show5();
                         },
                         child: Container(
                           height: 80.h,
@@ -240,7 +296,7 @@ class _MenuPageState extends State<MenuPage> {
                             borderRadius: BorderRadius.circular(15)
                           ),
                           child: Center(
-                              child:Icon(EvaIcons.fileTextOutline,size: 45.sp,color:Color(0xff6baa90))
+                              child:Image.asset('assets/icons/result.png',width: 60.w,height: 50.h,)
                           ),
                         ),
                       ),
@@ -256,7 +312,7 @@ class _MenuPageState extends State<MenuPage> {
                       GridTile(
                       child: InkWell(
                         onTap: (){
-                          // show();
+                          show6();
                         },
                         child: Container(
                           height: 80.h,
@@ -266,7 +322,7 @@ class _MenuPageState extends State<MenuPage> {
                             borderRadius: BorderRadius.circular(15)
                           ),
                           child: Center(
-                              child:Icon(EvaIcons.bookOpenOutline,size: 45.sp,color:Color(0xff6baa90))
+                              child:Image.asset('assets/icons/report.png',width: 60.w,height: 50.h,)
                           ),
                         ),
                       ),
@@ -282,7 +338,7 @@ class _MenuPageState extends State<MenuPage> {
                       GridTile(
                       child: InkWell(
                         onTap: (){
-                          // show();
+                          show7();
                         },
                         child: Container(
                           height: 80.h,
@@ -292,7 +348,7 @@ class _MenuPageState extends State<MenuPage> {
                             borderRadius: BorderRadius.circular(15)
                           ),
                           child: Center(
-                              child:Icon(EvaIcons.person,size: 45.sp,color:Color(0xff6baa90))
+                              child:Image.asset('assets/icons/parents.png',width: 60.w,height: 50.h,)
                           ),
                         ),
                       ),
@@ -308,7 +364,7 @@ class _MenuPageState extends State<MenuPage> {
                       GridTile(
                       child: InkWell(
                         onTap: (){
-                          // show();
+                          show8();
                         },
                         child: Container(
                           height: 80.h,
@@ -318,7 +374,7 @@ class _MenuPageState extends State<MenuPage> {
                             borderRadius: BorderRadius.circular(15)
                           ),
                           child: Center(
-                              child:Icon(EvaIcons.browserOutline,size: 45.sp,color:Color(0xff6baa90))
+                              child:Image.asset('assets/icons/holiday.png',width: 60.w,height: 50.h,)
                           ),
                         ),
                       ),
@@ -334,7 +390,7 @@ class _MenuPageState extends State<MenuPage> {
                       GridTile(
                       child: InkWell(
                         onTap: (){
-                          // show();
+                          show9();
                         },
                         child: Container(
                           height: 80.h,
@@ -344,7 +400,7 @@ class _MenuPageState extends State<MenuPage> {
                             borderRadius: BorderRadius.circular(15)
                           ),
                           child: Center(
-                              child:Icon(EvaIcons.settings2Outline,size: 45.sp,color:Color(0xff6baa90))
+                              child:Image.asset('assets/icons/settings.png',width: 60.w,height: 50.h,)
                           ),
                         ),
                       ),
@@ -379,7 +435,7 @@ class _MenuPageState extends State<MenuPage> {
 
                         Container(
                           width: double.infinity,
-                          height: 200.h,
+                          height: 170.h,
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.vertical(bottom: Radius.circular(40),),
                               color: Color(0xff205578)
@@ -414,7 +470,7 @@ class _MenuPageState extends State<MenuPage> {
 
                         Container(
                           width: double.infinity,
-                          height: 200.h,
+                          height: 150.h,
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.vertical(bottom: Radius.circular(40),),
                               color: Color(0xff205578)
@@ -435,6 +491,272 @@ class _MenuPageState extends State<MenuPage> {
                         Align(
                             alignment:Alignment.topCenter,
                             child: TimeTable())
+
+                      ]
+                  )
+              ),
+
+            ),
+            Visibility(
+              visible: _showContainer3,
+              child: Container(
+                  height:825.h,
+                  width:double.infinity,
+                  color: Colors.white,
+                  child: Stack(
+                      children:[
+
+                        Container(
+                          width: double.infinity,
+                          height: 170.h,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.vertical(bottom: Radius.circular(40),),
+                              color: Color(0xff205578)
+                          ),
+
+                        ),
+                        Positioned(
+                          left: 15.w,
+                          top:60.h,
+                          child: IconButton(
+                              onPressed: (){
+                                show3();
+                              },
+                              icon: Icon(Icons.arrow_back,color:Colors.white,size:25.sp)
+                          ),
+                        ),
+
+                        Align(
+                            alignment:Alignment.topCenter,
+                            child: NoticeBoard())
+
+                      ]
+                  )
+              ),
+
+            ),
+            Visibility(
+              visible: _showContainer4,
+              child: Container(
+                  height:825.h,
+                  width:double.infinity,
+                  color: Colors.white,
+                  child: Stack(
+                      children:[
+
+                        Container(
+                          width: double.infinity,
+                          height: 170.h,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.vertical(bottom: Radius.circular(40),),
+                              color: Color(0xff205578)
+                          ),
+
+                        ),
+                        Positioned(
+                          left: 15.w,
+                          top:40.h,
+                          child: IconButton(
+                              onPressed: (){
+                                show4();
+                              },
+                              icon: Icon(Icons.arrow_back,color:Colors.white,size:25.sp)
+                          ),
+                        ),
+
+                        Align(
+                            alignment:Alignment.topCenter,
+                            child: Examination())
+
+                      ]
+                  )
+              ),
+
+            ),
+            Visibility(
+              visible: _showContainer5,
+              child: Container(
+                  height:825.h,
+                  width:double.infinity,
+                  color: Colors.white,
+                  child: Stack(
+                      children:[
+
+                        Container(
+                          width: double.infinity,
+                          height: 170.h,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.vertical(bottom: Radius.circular(40),),
+                              color: Color(0xff205578)
+                          ),
+
+                        ),
+                        Positioned(
+                          left: 15.w,
+                          top:40.h,
+                          child: IconButton(
+                              onPressed: (){
+                                show5();
+                              },
+                              icon: Icon(Icons.arrow_back,color:Colors.white,size:25.sp)
+                          ),
+                        ),
+
+                        Align(
+                            alignment:Alignment.topCenter,
+                            child: ResultPage())
+
+                      ]
+                  )
+              ),
+
+            ),
+            Visibility(
+              visible: _showContainer6,
+              child: Container(
+                  height:825.h,
+                  width:double.infinity,
+                  color: Colors.white,
+                  child: Stack(
+                      children:[
+
+                        Container(
+                          width: double.infinity,
+                          height: 150.h,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.vertical(bottom: Radius.circular(40),),
+                              color: Color(0xff205578)
+                          ),
+
+                        ),
+                        Positioned(
+                          left: 15.w,
+                          top:40.h,
+                          child: IconButton(
+                              onPressed: (){
+                                show6();
+                              },
+                              icon: Icon(Icons.arrow_back,color:Colors.white,size:25.sp)
+                          ),
+                        ),
+
+                        Align(
+                            alignment:Alignment.topCenter,
+                            child: ReportPage())
+
+                      ]
+                  )
+              ),
+
+            ),
+            Visibility(
+              visible: _showContainer7,
+              child: Container(
+                  height:825.h,
+                  width:double.infinity,
+                  color: Colors.white,
+                  child: Stack(
+                      children:[
+
+                        Container(
+                          width: double.infinity,
+                          height: 150.h,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.vertical(bottom: Radius.circular(40),),
+                              color: Color(0xff205578)
+                          ),
+
+                        ),
+                        Positioned(
+                          left: 15.w,
+                          top:40.h,
+                          child: IconButton(
+                              onPressed: (){
+                                show7();
+                              },
+                              icon: Icon(Icons.arrow_back,color:Colors.white,size:25.sp)
+                          ),
+                        ),
+
+                        Align(
+                            alignment:Alignment.topCenter,
+                            child: ParentsProfile())
+
+                      ]
+                  )
+              ),
+
+            ),
+            Visibility(
+              visible: _showContainer8,
+              child: Container(
+                  height:825.h,
+                  width:double.infinity,
+                  color: Colors.white,
+                  child: Stack(
+                      children:[
+
+                        Container(
+                          width: double.infinity,
+                          height: 200.h,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.vertical(bottom: Radius.circular(40),),
+                              color: Color(0xff205578)
+                          ),
+
+                        ),
+                        Positioned(
+                          left: 15.w,
+                          top:60.h,
+                          child: IconButton(
+                              onPressed: (){
+                                show8();
+                              },
+                              icon: Icon(Icons.arrow_back,color:Colors.white,size:25.sp)
+                          ),
+                        ),
+
+                        Align(
+                            alignment:Alignment.topCenter,
+                            child: Holidays())
+
+                      ]
+                  )
+              ),
+
+            ),
+            Visibility(
+              visible: _showContainer9,
+              child: Container(
+                  height:825.h,
+                  width:double.infinity,
+                  color: Colors.white,
+                  child: Stack(
+                      children:[
+
+                        Container(
+                          width: double.infinity,
+                          height: 150.h,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.vertical(bottom: Radius.circular(40),),
+                              color: Color(0xff205578)
+                          ),
+
+                        ),
+                        Positioned(
+                          left: 15.w,
+                          top:60.h,
+                          child: IconButton(
+                              onPressed: (){
+                                show9();
+                              },
+                              icon: Icon(Icons.arrow_back,color:Colors.white,size:25.sp)
+                          ),
+                        ),
+
+                        Align(
+                            alignment:Alignment.topCenter,
+                            child: Settings())
 
                       ]
                   )

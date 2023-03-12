@@ -1,12 +1,12 @@
 import 'package:eschool/view_page/homepage_student/default_page.dart';
 import 'package:eschool/view_page/homepage_student/overview_page.dart';
-import 'package:eschool/view_page/sample_pages/assignments_samples.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:eschool/view_page/login_pages/login_page.dart';
 import 'package:eschool/view_page/homepage_student/assignment_page.dart';
+import 'package:eschool/view_page/sample_pages/report_tabs/reports.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 

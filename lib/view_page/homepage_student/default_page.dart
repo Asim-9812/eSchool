@@ -49,7 +49,7 @@ class _DefaultPageState extends State<DefaultPage> with TickerProviderStateMixin
           AnimatedContainer(
             alignment: Alignment(boxX, boxY),
             curve: Curves.bounceIn,
-            duration: Duration(milliseconds:800),
+            duration: Duration(milliseconds:700),
             child: Card(
               elevation: 5,
               color: Colors.white,
