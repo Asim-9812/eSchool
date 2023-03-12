@@ -50,7 +50,7 @@ class _LoginPageState extends State<LoginPage> with SingleTickerProviderStateMix
               )
           ),
           AnimatedContainer(
-          duration: Duration(seconds: 1) ,
+          duration: Duration(milliseconds: 700) ,
             alignment: Alignment(boxX, boxY),
             curve: Curves.bounceIn,
             child: Container(

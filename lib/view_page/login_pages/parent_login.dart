@@ -1,6 +1,7 @@
 
 import 'package:eschool/constants/colors.dart';
 import 'package:eschool/view_page/login_pages/student_page.dart';
+import 'package:eschool/view_page/homepage_parents/overview_parents.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
@@ -181,7 +182,7 @@ class _Parent_loginState extends State<Parent_login> {
                                         )
                                     )
                                 ),
-                                onPressed: (){},
+                                onPressed: ()=>Get.to(()=> OverviewParents()),
                                 child: Padding(
                                   padding: EdgeInsets.symmetric(vertical: 5.h,horizontal: 8.w),
                                   child: Text('Sign In',style: TextStyle(fontSize: 25.sp,),),
