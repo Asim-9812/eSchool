@@ -1,6 +1,15 @@
 
 
 import 'package:eschool/constants/colors.dart';
+import 'package:eschool/view_page/homepage_student/assignment_page.dart';
+import 'package:eschool/view_page/homepage_student/menu_items/attendance_page.dart';
+import 'package:eschool/view_page/homepage_student/menu_items/exam_page.dart';
+import 'package:eschool/view_page/homepage_student/menu_items/holidays_page.dart';
+import 'package:eschool/view_page/homepage_student/menu_items/report_page.dart';
+import 'package:eschool/view_page/homepage_student/menu_items/result_page.dart';
+import 'package:eschool/view_page/homepage_student/menu_items/timetable_page.dart';
+import 'package:eschool/view_page/sample_pages/fees_sample.dart';
+import 'package:eschool/view_page/sample_pages/teachers_sample.dart';
 import 'package:eschool/view_page/login_pages/login_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -23,14 +32,7 @@ class MenuParents extends StatelessWidget {
                     color: primary,
                     borderRadius: BorderRadius.vertical(bottom: Radius.circular(20))
                 ),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-
-
-                    Text('Menu',style: TextStyle(color: Colors.white,fontSize: 30.sp,),),
-                  ],
-                ),
+                child: Center(child: Text('Menu',style: TextStyle(color: Colors.white,fontSize: 30.sp,),)),
               ),
 
               Center(
@@ -53,6 +55,7 @@ class MenuParents extends StatelessWidget {
                           ),
                           child: ListTile(
                             contentPadding: EdgeInsets.symmetric(horizontal: 8.w,vertical: 8.h),
+                            onTap: ()=>Get.to(()=>AssignmentPage()),
                             title: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
@@ -93,6 +96,7 @@ class MenuParents extends StatelessWidget {
                           ),
                           child: ListTile(
                             contentPadding: EdgeInsets.symmetric(horizontal: 8.w,vertical: 8.h),
+                            onTap: ()=>Get.to(()=>TeacherPage()),
                             title: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
@@ -132,6 +136,7 @@ class MenuParents extends StatelessWidget {
                               )
                           ),
                           child: ListTile(
+                            onTap: ()=>Get.to(()=>Attendance()),
                             contentPadding: EdgeInsets.symmetric(horizontal: 8.w,vertical: 8.h),
                             title: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -172,6 +177,7 @@ class MenuParents extends StatelessWidget {
                               )
                           ),
                           child: ListTile(
+                            onTap: ()=>Get.to(()=>TimeTable()),
                             contentPadding: EdgeInsets.symmetric(horizontal: 8.w,vertical: 8.h),
                             title: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -212,6 +218,7 @@ class MenuParents extends StatelessWidget {
                               )
                           ),
                           child: ListTile(
+                            onTap: ()=>Get.to(()=>Holidays()),
                             contentPadding: EdgeInsets.symmetric(horizontal: 8.w,vertical: 8.h),
                             title: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -252,6 +259,7 @@ class MenuParents extends StatelessWidget {
                               )
                           ),
                           child: ListTile(
+                            onTap: ()=>Get.to(()=>Examination()),
                             contentPadding: EdgeInsets.symmetric(horizontal: 8.w,vertical: 8.h),
                             title: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -292,6 +300,7 @@ class MenuParents extends StatelessWidget {
                               )
                           ),
                           child: ListTile(
+                            onTap: ()=>Get.to(()=>ResultPage()),
                             contentPadding: EdgeInsets.symmetric(horizontal: 8.w,vertical: 8.h),
                             title: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -332,6 +341,7 @@ class MenuParents extends StatelessWidget {
                               )
                           ),
                           child: ListTile(
+                            onTap: ()=>Get.to(()=>ReportPage()),
                             contentPadding: EdgeInsets.symmetric(horizontal: 8.w,vertical: 8.h),
                             title: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -373,6 +383,7 @@ class MenuParents extends StatelessWidget {
                           ),
                           child: ListTile(
                             contentPadding: EdgeInsets.symmetric(horizontal: 8.w,vertical: 8.h),
+                            onTap: ()=>Get.to(()=>FeePage()),
                             title: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [

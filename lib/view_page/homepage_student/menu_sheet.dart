@@ -118,7 +118,7 @@ class _MenuPageState extends State<MenuPage> {
               alignment: Alignment(boxX, boxY),
               curve: Curves.bounceIn,
               child: Container(
-                height: 600.h,
+                height: 650.h,
                 width: 392.w,
                 decoration: BoxDecoration(
                     color: Colors.white,
@@ -140,8 +140,9 @@ class _MenuPageState extends State<MenuPage> {
                               Padding(
                                 padding: EdgeInsets.symmetric(vertical:8.h,horizontal:8.w),
                                 child: CircleAvatar(
-                                  backgroundColor: Colors.black,
-                                  radius: 30.sp,
+                                    backgroundColor: Colors.white,
+                                    radius: 30.sp,
+                                    child: Icon(Icons.person,size:40.sp,color: Colors.grey)
                                 ),
                               ),
                               Padding(
@@ -150,7 +151,7 @@ class _MenuPageState extends State<MenuPage> {
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
-                                    Text('Username',style:TextStyle(fontSize: 25.sp,color: Colors.black,fontWeight: FontWeight.bold),),
+                                    Text('Username',style:TextStyle(fontSize: 25.sp,color: Colors.black,),),
                                     Text('Class : 9 A | Roll No : 9',style:TextStyle(fontSize: 15.sp,color: Colors.grey),)
                                   ],
                                 ),
@@ -168,253 +169,249 @@ class _MenuPageState extends State<MenuPage> {
                       indent: 20.w,
                       endIndent: 20.w,
                     ),
-                    Container(
-                      height:375.h,
-                      width:350.w,
-                      // color: Colors.red,
-                      child: GridView(
-                          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                              childAspectRatio: 2.w/2.h,
-                              crossAxisCount: 3, mainAxisSpacing: 4.h,crossAxisSpacing: 5.w),
-                          children: [
-                      Column(
-                      children: [
-                      GridTile(
-                      child: InkWell(
-                        onTap: (){
-                          show();
-                        },
-                        child: Container(
-                          height: 80.h,
-                          width: 80.w,
-                          decoration: BoxDecoration(
-                            color: Color(0xffbbedd7),
-                            borderRadius: BorderRadius.circular(15)
-                          ),
-                          child: Center(
-                              child:Image.asset('assets/icons/attendance.png',width: 50.w,height: 50.h,)
-                          ),
+                    GridView(
+                      shrinkWrap: true,
+                        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                            childAspectRatio: 2.w/2.1.h,
+                            crossAxisCount: 3, mainAxisSpacing: 4.h,crossAxisSpacing: 5.w),
+                        children: [
+                    Column(
+                    children: [
+                    GridTile(
+                    child: InkWell(
+                      onTap: (){
+                        show();
+                      },
+                      child: Container(
+                        height: 90.h,
+                        width: 90.w,
+                        decoration: BoxDecoration(
+                          color: Color(0xffbbedd7),
+                          borderRadius: BorderRadius.circular(15)
+                        ),
+                        child: Center(
+                            child:Image.asset('assets/icons/attendance.png',width: 50.w,height: 50.h,)
                         ),
                       ),
                     ),
+                    ),
                     Padding(
-                      padding: EdgeInsets.symmetric(vertical:8.h,horizontal:8.w),
-                      child: Text('Attendance',style: TextStyle(color: Colors.black)),
+                    padding: EdgeInsets.symmetric(vertical:8.h,horizontal:8.w),
+                    child: Text('Attendance',style: TextStyle(color: Colors.black)),
                     )
                   ],
                 ),
-                      Column(
-                      children: [
-                      GridTile(
-                      child: InkWell(
-                        onTap: (){
-                          show2();
-                        },
-                        child: Container(
-                          height: 80.h,
-                          width: 80.w,
-                          decoration: BoxDecoration(
-                            color: Color(0xffbbedd7),
-                            borderRadius: BorderRadius.circular(15)
-                          ),
-                          child: Center(
-                              child:Image.asset('assets/icons/timetable.png',width: 60.w,height: 50.h,)
-                          ),
+                    Column(
+                    children: [
+                    GridTile(
+                    child: InkWell(
+                      onTap: (){
+                        show2();
+                      },
+                      child: Container(
+                        height: 90.h,
+                        width: 90.w,
+                        decoration: BoxDecoration(
+                          color: Color(0xffbbedd7),
+                          borderRadius: BorderRadius.circular(15)
+                        ),
+                        child: Center(
+                            child:Image.asset('assets/icons/timetable.png',width: 60.w,height: 50.h,)
                         ),
                       ),
                     ),
+                    ),
                     Padding(
-                      padding: EdgeInsets.symmetric(vertical:8.h,horizontal:8.w),
-                      child: Text('Timetable',style: TextStyle(color: Colors.black)),
+                    padding: EdgeInsets.symmetric(vertical:8.h,horizontal:8.w),
+                    child: Text('Timetable',style: TextStyle(color: Colors.black)),
                     )
                   ],
                 ),
-                      Column(
-                      children: [
-                      GridTile(
-                      child: InkWell(
-                        onTap: (){
-                          show3();
-                        },
-                        child: Container(
-                          height: 80.h,
-                          width: 80.w,
-                          decoration: BoxDecoration(
-                            color: Color(0xffbbedd7),
-                            borderRadius: BorderRadius.circular(15)
-                          ),
-                          child: Center(
-                              child:Image.asset('assets/icons/noticeboard.png',width: 60.w,height: 50.h,)
-                          ),
+                    Column(
+                    children: [
+                    GridTile(
+                    child: InkWell(
+                      onTap: (){
+                        show3();
+                      },
+                      child: Container(
+                        height: 90.h,
+                        width: 90.w,
+                        decoration: BoxDecoration(
+                          color: Color(0xffbbedd7),
+                          borderRadius: BorderRadius.circular(15)
+                        ),
+                        child: Center(
+                            child:Image.asset('assets/icons/noticeboard.png',width: 60.w,height: 50.h,)
                         ),
                       ),
                     ),
+                    ),
                     Padding(
-                      padding: EdgeInsets.symmetric(vertical:8.h,horizontal:8.w),
-                      child: Text('Notice Board',style: TextStyle(color: Colors.black)),
+                    padding: EdgeInsets.symmetric(vertical:8.h,horizontal:8.w),
+                    child: Text('Notice Board',style: TextStyle(color: Colors.black)),
                     )
                   ],
                 ),
-                      Column(
-                      children: [
-                      GridTile(
-                      child: InkWell(
-                        onTap: (){
-                          show4();
-                        },
-                        child: Container(
-                          height: 80.h,
-                          width: 80.w,
-                          decoration: BoxDecoration(
-                            color: Color(0xffbbedd7),
-                            borderRadius: BorderRadius.circular(15)
-                          ),
-                          child: Center(
-                              child:Image.asset('assets/icons/exam.png',width: 60.w,height: 50.h,)
-                          ),
+                    Column(
+                    children: [
+                    GridTile(
+                    child: InkWell(
+                      onTap: (){
+                        show4();
+                      },
+                      child: Container(
+                        height: 90.h,
+                        width: 90.w,
+                        decoration: BoxDecoration(
+                          color: Color(0xffbbedd7),
+                          borderRadius: BorderRadius.circular(15)
+                        ),
+                        child: Center(
+                            child:Image.asset('assets/icons/exam.png',width: 60.w,height: 50.h,)
                         ),
                       ),
                     ),
+                    ),
                     Padding(
-                      padding: EdgeInsets.symmetric(vertical:8.h,horizontal:8.w),
-                      child: Text('Exam',style: TextStyle(color: Colors.black)),
+                    padding: EdgeInsets.symmetric(vertical:8.h,horizontal:8.w),
+                    child: Text('Exam',style: TextStyle(color: Colors.black)),
                     )
                   ],
                 ),
-                      Column(
-                      children: [
-                      GridTile(
-                      child: InkWell(
-                        onTap: (){
-                          show5();
-                        },
-                        child: Container(
-                          height: 80.h,
-                          width: 80.w,
-                          decoration: BoxDecoration(
-                            color: Color(0xffbbedd7),
-                            borderRadius: BorderRadius.circular(15)
-                          ),
-                          child: Center(
-                              child:Image.asset('assets/icons/result.png',width: 60.w,height: 50.h,)
-                          ),
+                    Column(
+                    children: [
+                    GridTile(
+                    child: InkWell(
+                      onTap: (){
+                        show5();
+                      },
+                      child: Container(
+                        height: 90.h,
+                        width: 90.w,
+                        decoration: BoxDecoration(
+                          color: Color(0xffbbedd7),
+                          borderRadius: BorderRadius.circular(15)
+                        ),
+                        child: Center(
+                            child:Image.asset('assets/icons/result.png',width: 60.w,height: 50.h,)
                         ),
                       ),
                     ),
+                    ),
                     Padding(
-                      padding: EdgeInsets.symmetric(vertical:8.h,horizontal:8.w),
-                      child: Text('Result',style: TextStyle(color: Colors.black)),
+                    padding: EdgeInsets.symmetric(vertical:8.h,horizontal:8.w),
+                    child: Text('Result',style: TextStyle(color: Colors.black)),
                     )
                   ],
                 ),
-                      Column(
-                      children: [
-                      GridTile(
-                      child: InkWell(
-                        onTap: (){
-                          show6();
-                        },
-                        child: Container(
-                          height: 80.h,
-                          width: 80.w,
-                          decoration: BoxDecoration(
-                            color: Color(0xffbbedd7),
-                            borderRadius: BorderRadius.circular(15)
-                          ),
-                          child: Center(
-                              child:Image.asset('assets/icons/report.png',width: 60.w,height: 50.h,)
-                          ),
+                    Column(
+                    children: [
+                    GridTile(
+                    child: InkWell(
+                      onTap: (){
+                        show6();
+                      },
+                      child: Container(
+                        height: 90.h,
+                        width: 90.w,
+                        decoration: BoxDecoration(
+                          color: Color(0xffbbedd7),
+                          borderRadius: BorderRadius.circular(15)
+                        ),
+                        child: Center(
+                            child:Image.asset('assets/icons/report.png',width: 60.w,height: 50.h,)
                         ),
                       ),
                     ),
+                    ),
                     Padding(
-                      padding: EdgeInsets.symmetric(vertical:8.h,horizontal:8.w),
-                      child: Text('Report',style: TextStyle(color: Colors.black)),
+                    padding: EdgeInsets.symmetric(vertical:8.h,horizontal:8.w),
+                    child: Text('Report',style: TextStyle(color: Colors.black)),
                     )
                   ],
                 ),
-                      Column(
-                      children: [
-                      GridTile(
-                      child: InkWell(
-                        onTap: (){
-                          show7();
-                        },
-                        child: Container(
-                          height: 80.h,
-                          width: 80.w,
-                          decoration: BoxDecoration(
-                            color: Color(0xffbbedd7),
-                            borderRadius: BorderRadius.circular(15)
-                          ),
-                          child: Center(
-                              child:Image.asset('assets/icons/parents.png',width: 60.w,height: 50.h,)
-                          ),
+                    Column(
+                    children: [
+                    GridTile(
+                    child: InkWell(
+                      onTap: (){
+                        show7();
+                      },
+                      child: Container(
+                        height: 90.h,
+                        width: 90.w,
+                        decoration: BoxDecoration(
+                          color: Color(0xffbbedd7),
+                          borderRadius: BorderRadius.circular(15)
+                        ),
+                        child: Center(
+                            child:Image.asset('assets/icons/parents.png',width: 60.w,height: 50.h,)
                         ),
                       ),
                     ),
+                    ),
                     Padding(
-                      padding: EdgeInsets.symmetric(vertical:8.h,horizontal:8.w),
-                      child: Text('Parent Profile',style: TextStyle(color: Colors.black)),
+                    padding: EdgeInsets.symmetric(vertical:8.h,horizontal:8.w),
+                    child: Text('Parent Profile',style: TextStyle(color: Colors.black)),
                     )
                   ],
                 ),
-                      Column(
-                      children: [
-                      GridTile(
-                      child: InkWell(
-                        onTap: (){
-                          show8();
-                        },
-                        child: Container(
-                          height: 80.h,
-                          width: 80.w,
-                          decoration: BoxDecoration(
-                            color: Color(0xffbbedd7),
-                            borderRadius: BorderRadius.circular(15)
-                          ),
-                          child: Center(
-                              child:Image.asset('assets/icons/holiday.png',width: 60.w,height: 50.h,)
-                          ),
+                    Column(
+                    children: [
+                    GridTile(
+                    child: InkWell(
+                      onTap: (){
+                        show8();
+                      },
+                      child: Container(
+                        height: 90.h,
+                        width: 90.w,
+                        decoration: BoxDecoration(
+                          color: Color(0xffbbedd7),
+                          borderRadius: BorderRadius.circular(15)
+                        ),
+                        child: Center(
+                            child:Image.asset('assets/icons/holiday.png',width: 60.w,height: 50.h,)
                         ),
                       ),
                     ),
+                    ),
                     Padding(
-                      padding: EdgeInsets.symmetric(vertical:8.h,horizontal:8.w),
-                      child: Text('Holidays',style: TextStyle(color: Colors.black)),
+                    padding: EdgeInsets.symmetric(vertical:8.h,horizontal:8.w),
+                    child: Text('Holidays',style: TextStyle(color: Colors.black)),
                     )
                   ],
                 ),
-                      Column(
-                      children: [
-                      GridTile(
-                      child: InkWell(
-                        onTap: (){
-                          show9();
-                        },
-                        child: Container(
-                          height: 80.h,
-                          width: 80.w,
-                          decoration: BoxDecoration(
-                            color: Color(0xffbbedd7),
-                            borderRadius: BorderRadius.circular(15)
-                          ),
-                          child: Center(
-                              child:Image.asset('assets/icons/settings.png',width: 60.w,height: 50.h,)
-                          ),
+                    Column(
+                    children: [
+                    GridTile(
+                    child: InkWell(
+                      onTap: (){
+                        show9();
+                      },
+                      child: Container(
+                        height: 90.h,
+                        width: 90.w,
+                        decoration: BoxDecoration(
+                          color: Color(0xffbbedd7),
+                          borderRadius: BorderRadius.circular(15)
+                        ),
+                        child: Center(
+                            child:Image.asset('assets/icons/settings.png',width: 60.w,height: 50.h,)
                         ),
                       ),
                     ),
+                    ),
                     Padding(
-                      padding: EdgeInsets.symmetric(vertical:8.h,horizontal:8.w),
-                      child: Text('Settings',style: TextStyle(color: Colors.black)),
+                    padding: EdgeInsets.symmetric(vertical:8.h,horizontal:8.w),
+                    child: Text('Settings',style: TextStyle(color: Colors.black)),
                     )
                   ],
                 ),
 
 
-                          ])
-                    ),
+                        ]),
                     SizedBox(
                       height: 100.h
                     )
@@ -426,340 +423,188 @@ class _MenuPageState extends State<MenuPage> {
             ),
             Visibility(
                 visible: _showContainer,
-                child: Container(
-                  height:825.h,
-                  width:double.infinity,
-                  color: Colors.white,
-                  child: Stack(
-                      children:[
+                child: Stack(
+                    children:[
 
-                        Container(
-                          width: double.infinity,
-                          height: 170.h,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.vertical(bottom: Radius.circular(40),),
-                              color: Color(0xff205578)
-                          ),
+                      Attendance(),
 
+                      Positioned(
+                        left: 15.w,
+                        top:50.h,
+                        child: IconButton(
+                            onPressed: (){
+                              show();
+                            },
+                            icon: Icon(Icons.arrow_back,color:Colors.white,size:25.sp)
                         ),
-                        Positioned(
-                          left: 15.w,
-                          top:50.h,
-                          child: IconButton(
-                              onPressed: (){
-                                show();
-                              },
-                              icon: Icon(Icons.arrow_back,color:Colors.white,size:25.sp)
-                          ),
-                        ),
-
-                        Align(
-                            alignment:Alignment.topCenter,
-                            child: Attendance())
-                      ]),)
+                      ),
+                    ])
 
             ),
             Visibility(
               visible: _showContainer2,
-              child: Container(
-                  height:825.h,
-                  width:double.infinity,
-                  color: Colors.white,
-                  child: Stack(
-                      children:[
+              child: Stack(
+                  children:[
+                    TimeTable(),
+                    Positioned(
+                      left: 15.w,
+                      top:60.h,
+                      child: IconButton(
+                          onPressed: (){
+                            show2();
+                          },
+                          icon: Icon(Icons.arrow_back,color:Colors.white,size:25.sp)
+                      ),
+                    ),
 
-                        Container(
-                          width: double.infinity,
-                          height: 150.h,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.vertical(bottom: Radius.circular(40),),
-                              color: Color(0xff205578)
-                          ),
-
-                        ),
-                        Positioned(
-                          left: 15.w,
-                          top:60.h,
-                          child: IconButton(
-                              onPressed: (){
-                                show2();
-                              },
-                              icon: Icon(Icons.arrow_back,color:Colors.white,size:25.sp)
-                          ),
-                        ),
-
-                        Align(
-                            alignment:Alignment.topCenter,
-                            child: TimeTable())
-
-                      ]
-                  )
+                  ]
               ),
 
             ),
             Visibility(
               visible: _showContainer3,
-              child: Container(
-                  height:825.h,
-                  width:double.infinity,
-                  color: Colors.white,
-                  child: Stack(
-                      children:[
+              child: Stack(
+                  children:[
 
-                        Container(
-                          width: double.infinity,
-                          height: 170.h,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.vertical(bottom: Radius.circular(40),),
-                              color: Color(0xff205578)
-                          ),
+                    NoticeBoard(),
+                    Positioned(
+                      left: 15.w,
+                      top:60.h,
+                      child: IconButton(
+                          onPressed: (){
+                            show3();
+                          },
+                          icon: Icon(Icons.arrow_back,color:Colors.white,size:25.sp)
+                      ),
+                    ),
 
-                        ),
-                        Positioned(
-                          left: 15.w,
-                          top:60.h,
-                          child: IconButton(
-                              onPressed: (){
-                                show3();
-                              },
-                              icon: Icon(Icons.arrow_back,color:Colors.white,size:25.sp)
-                          ),
-                        ),
-
-                        Align(
-                            alignment:Alignment.topCenter,
-                            child: NoticeBoard())
-
-                      ]
-                  )
+                  ]
               ),
 
             ),
             Visibility(
               visible: _showContainer4,
-              child: Container(
-                  height:825.h,
-                  width:double.infinity,
-                  color: Colors.white,
-                  child: Stack(
-                      children:[
+              child: Stack(
+                  children:[
 
-                        Container(
-                          width: double.infinity,
-                          height: 170.h,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.vertical(bottom: Radius.circular(40),),
-                              color: Color(0xff205578)
-                          ),
+                    Examination(),
+                    Positioned(
+                      left: 15.w,
+                      top:40.h,
+                      child: IconButton(
+                          onPressed: (){
+                            show4();
+                          },
+                          icon: Icon(Icons.arrow_back,color:Colors.white,size:25.sp)
+                      ),
+                    ),
 
-                        ),
-                        Positioned(
-                          left: 15.w,
-                          top:40.h,
-                          child: IconButton(
-                              onPressed: (){
-                                show4();
-                              },
-                              icon: Icon(Icons.arrow_back,color:Colors.white,size:25.sp)
-                          ),
-                        ),
-
-                        Align(
-                            alignment:Alignment.topCenter,
-                            child: Examination())
-
-                      ]
-                  )
+                  ]
               ),
 
             ),
             Visibility(
               visible: _showContainer5,
-              child: Container(
-                  height:825.h,
-                  width:double.infinity,
-                  color: Colors.white,
-                  child: Stack(
-                      children:[
+              child: Stack(
+                  children:[
 
-                        Container(
-                          width: double.infinity,
-                          height: 170.h,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.vertical(bottom: Radius.circular(40),),
-                              color: Color(0xff205578)
-                          ),
+                    ResultPage(),
+                    Positioned(
+                      left: 15.w,
+                      top:40.h,
+                      child: IconButton(
+                          onPressed: (){
+                            show5();
+                          },
+                          icon: Icon(Icons.arrow_back,color:Colors.white,size:25.sp)
+                      ),
+                    ),
 
-                        ),
-                        Positioned(
-                          left: 15.w,
-                          top:40.h,
-                          child: IconButton(
-                              onPressed: (){
-                                show5();
-                              },
-                              icon: Icon(Icons.arrow_back,color:Colors.white,size:25.sp)
-                          ),
-                        ),
-
-                        Align(
-                            alignment:Alignment.topCenter,
-                            child: ResultPage())
-
-                      ]
-                  )
+                  ]
               ),
 
             ),
             Visibility(
               visible: _showContainer6,
-              child: Container(
-                  height:825.h,
-                  width:double.infinity,
-                  color: Colors.white,
-                  child: Stack(
-                      children:[
+              child: Stack(
+                  children:[
 
-                        Container(
-                          width: double.infinity,
-                          height: 150.h,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.vertical(bottom: Radius.circular(40),),
-                              color: Color(0xff205578)
-                          ),
+                    ReportPage(),
+                    Positioned(
+                      left: 15.w,
+                      top:40.h,
+                      child: IconButton(
+                          onPressed: (){
+                            show6();
+                          },
+                          icon: Icon(Icons.arrow_back,color:Colors.white,size:25.sp)
+                      ),
+                    ),
 
-                        ),
-                        Positioned(
-                          left: 15.w,
-                          top:40.h,
-                          child: IconButton(
-                              onPressed: (){
-                                show6();
-                              },
-                              icon: Icon(Icons.arrow_back,color:Colors.white,size:25.sp)
-                          ),
-                        ),
-
-                        Align(
-                            alignment:Alignment.topCenter,
-                            child: ReportPage())
-
-                      ]
-                  )
+                  ]
               ),
 
             ),
             Visibility(
               visible: _showContainer7,
-              child: Container(
-                  height:825.h,
-                  width:double.infinity,
-                  color: Colors.white,
-                  child: Stack(
-                      children:[
+              child: Stack(
+                  children:[
 
-                        Container(
-                          width: double.infinity,
-                          height: 150.h,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.vertical(bottom: Radius.circular(40),),
-                              color: Color(0xff205578)
-                          ),
+                    ParentsProfile(),
+                    Positioned(
+                      left: 15.w,
+                      top:40.h,
+                      child: IconButton(
+                          onPressed: (){
+                            show7();
+                          },
+                          icon: Icon(Icons.arrow_back,color:Colors.white,size:25.sp)
+                      ),
+                    ),
 
-                        ),
-                        Positioned(
-                          left: 15.w,
-                          top:40.h,
-                          child: IconButton(
-                              onPressed: (){
-                                show7();
-                              },
-                              icon: Icon(Icons.arrow_back,color:Colors.white,size:25.sp)
-                          ),
-                        ),
-
-                        Align(
-                            alignment:Alignment.topCenter,
-                            child: ParentsProfile())
-
-                      ]
-                  )
+                  ]
               ),
 
             ),
             Visibility(
               visible: _showContainer8,
-              child: Container(
-                  height:825.h,
-                  width:double.infinity,
-                  color: Colors.white,
-                  child: Stack(
-                      children:[
+              child: Stack(
+                  children:[
 
-                        Container(
-                          width: double.infinity,
-                          height: 200.h,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.vertical(bottom: Radius.circular(40),),
-                              color: Color(0xff205578)
-                          ),
+                    Holidays(),
+                    Positioned(
+                      left: 15.w,
+                      top:60.h,
+                      child: IconButton(
+                          onPressed: (){
+                            show8();
+                          },
+                          icon: Icon(Icons.arrow_back,color:Colors.white,size:25.sp)
+                      ),
+                    ),
 
-                        ),
-                        Positioned(
-                          left: 15.w,
-                          top:60.h,
-                          child: IconButton(
-                              onPressed: (){
-                                show8();
-                              },
-                              icon: Icon(Icons.arrow_back,color:Colors.white,size:25.sp)
-                          ),
-                        ),
-
-                        Align(
-                            alignment:Alignment.topCenter,
-                            child: Holidays())
-
-                      ]
-                  )
+                  ]
               ),
 
             ),
             Visibility(
               visible: _showContainer9,
-              child: Container(
-                  height:825.h,
-                  width:double.infinity,
-                  color: Colors.white,
-                  child: Stack(
-                      children:[
+              child: Stack(
+                  children:[
 
-                        Container(
-                          width: double.infinity,
-                          height: 150.h,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.vertical(bottom: Radius.circular(40),),
-                              color: Color(0xff205578)
-                          ),
+                    Settings(),
+                    Positioned(
+                      left: 15.w,
+                      top:60.h,
+                      child: IconButton(
+                          onPressed: (){
+                            show9();
+                          },
+                          icon: Icon(Icons.arrow_back,color:Colors.white,size:25.sp)
+                      ),
+                    ),
 
-                        ),
-                        Positioned(
-                          left: 15.w,
-                          top:60.h,
-                          child: IconButton(
-                              onPressed: (){
-                                show9();
-                              },
-                              icon: Icon(Icons.arrow_back,color:Colors.white,size:25.sp)
-                          ),
-                        ),
-
-                        Align(
-                            alignment:Alignment.topCenter,
-                            child: Settings())
-
-                      ]
-                  )
+                  ]
               ),
 
             ),

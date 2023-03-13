@@ -5,6 +5,7 @@
 
 import 'package:eschool/constants/colors.dart';
 import 'package:eschool/view_page/sample_pages/report_tabs/report_assignment.dart';
+import 'package:eschool/view_page/sample_pages/report_tabs/report_exam.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
@@ -91,7 +92,7 @@ class _ReportState extends State<Report> with TickerProviderStateMixin {
                       controller: _tabController,
                       children: [
                         ReportAssign(),
-                        ReportAssign(),
+                        ReportExam(),
 
                       ],
                     ),

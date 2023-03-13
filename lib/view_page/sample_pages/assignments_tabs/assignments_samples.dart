@@ -9,228 +9,73 @@ class Assignments extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView(
+      shrinkWrap: true,
 
       children: [
         Padding(
           padding:EdgeInsets.symmetric(vertical: 8.h),
           child: Container(
-            height: 110.h,
+            height: 130.h,
 
             child: Stack(
               children:[
 
                 Align(
                   alignment: Alignment.centerRight,
-                  child: Padding(
-                    padding: EdgeInsets.only(right: 8.w),
-                    child: Container(
-                    width: 300.w,
-                    child: Card(
-                      color: Colors.white60,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20)
-                      ),
-                      child: Padding(
-                        padding: EdgeInsets.symmetric(vertical: 8.h,horizontal: 35.w),
-                        child: ListTile(
-                          title: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text('TASK 1',style:TextStyle(color: Colors.black,fontWeight: FontWeight.bold)),
-                              Text('QUESTIONS',style:TextStyle(color: Colors.black)),
-                              SizedBox(height: 20.h,),
-                              Text('DUE DATE',style:TextStyle(color: Colors.black,fontSize: 10.sp))
-                            ],
-                          ),
-
-
-                        ),
-                      ),
+                  child: Card(
+                    elevation: 0,
+                    color: Colors.grey.withOpacity(0.1),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20)
                     ),
-              ),
+                    child: SizedBox(
+                      height: 120.h,
+                      width: 300.w,
+                    )
                   ),
                 ),
+
                 Align(
-                  alignment: Alignment(-0.95, 0),
-                  child: Container(
-                      decoration: BoxDecoration(
-                          color:  Colors.lightBlueAccent,
-                          borderRadius: BorderRadius.circular(10)
-                      ),
-                      height: 70.h,
-                      width: 80.w
+                  alignment: Alignment.centerLeft,
+                  child: ListTile(
+                    contentPadding: EdgeInsets.symmetric(vertical: 0.h),
+                    title: Row(
+                      children: [
+                        Container(
+                          height: 80.h,
+                          width: 90.w,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                              color: Colors.red
+                          ),
+                        ),
+                        SizedBox(width: 15.w),
+                        Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            Text('Task 1',style: TextStyle(color: Colors.black,fontSize: 20.sp,fontWeight: FontWeight.bold),),
+                            Text('Questions',style: TextStyle(color: Colors.black54,fontSize: 15.sp),),
+                            SizedBox(height: 5.h,),
+                            Text('Due Date',style: TextStyle(color: Colors.black45,fontSize: 12.sp),),
+                          ],
+                        ),
+                      ],
+                    ),
+
+
                   ),
-                ),
+                )
+
 
               ]
             ),
           ),
         ),
-        Padding(
-          padding:EdgeInsets.symmetric(vertical: 8.h),
-          child: Container(
-            height: 110.h,
-
-            child: Stack(
-              children:[
-
-                Align(
-                  alignment: Alignment.centerRight,
-                  child: Padding(
-                    padding: EdgeInsets.only(right: 8.w),
-                    child: Container(
-                    width: 300.w,
-                    child: Card(
-                      color: Colors.white60,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20)
-                      ),
-                      child: Padding(
-                        padding: EdgeInsets.symmetric(vertical: 8.h,horizontal: 35.w),
-                        child: ListTile(
-                          title: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text('TASK 2',style:TextStyle(color: Colors.black,fontWeight: FontWeight.bold)),
-                              Text('QUESTIONS',style:TextStyle(color: Colors.black)),
-                              SizedBox(height: 20.h,),
-                              Text('DUE DATE',style:TextStyle(color: Colors.black,fontSize: 10.sp))
-                            ],
-                          ),
 
 
-                        ),
-                      ),
-                    ),
-              ),
-                  ),
-                ),
-                Align(
-                  alignment: Alignment(-0.95, 0),
-                  child: Container(
-                      decoration: BoxDecoration(
-                          color:  Colors.greenAccent,
-                          borderRadius: BorderRadius.circular(10)
-                      ),
-                      height: 70.h,
-                      width: 80.w
-                  ),
-                ),
 
-              ]
-            ),
-          ),
-        ),
-        Padding(
-          padding:EdgeInsets.symmetric(vertical: 8.h),
-          child: Container(
-            height: 110.h,
-
-            child: Stack(
-              children:[
-
-                Align(
-                  alignment: Alignment.centerRight,
-                  child: Padding(
-                    padding: EdgeInsets.only(right: 8.w),
-                    child: Container(
-                    width: 300.w,
-                    child: Card(
-                      color: Colors.white60,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20)
-                      ),
-                      child: Padding(
-                        padding: EdgeInsets.symmetric(vertical: 8.h,horizontal: 35.w),
-                        child: ListTile(
-                          title: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text('TASK 3',style:TextStyle(color: Colors.black,fontWeight: FontWeight.bold)),
-                              Text('QUESTIONS',style:TextStyle(color: Colors.black)),
-                              SizedBox(height: 20.h,),
-                              Text('DUE DATE',style:TextStyle(color: Colors.black,fontSize: 10.sp))
-                            ],
-                          ),
-
-
-                        ),
-                      ),
-                    ),
-              ),
-                  ),
-                ),
-                Align(
-                  alignment: Alignment(-0.95, 0),
-                  child: Container(
-                      decoration: BoxDecoration(
-                          color:  Colors.redAccent,
-                          borderRadius: BorderRadius.circular(10)
-                      ),
-                      height: 70.h,
-                      width: 80.w
-                  ),
-                ),
-
-              ]
-            ),
-          ),
-        ),
-        Padding(
-          padding:EdgeInsets.symmetric(vertical: 8.h),
-          child: Container(
-            height: 110.h,
-
-            child: Stack(
-              children:[
-
-                Align(
-                  alignment: Alignment.centerRight,
-                  child: Padding(
-                    padding: EdgeInsets.only(right: 8.w),
-                    child: Container(
-                    width: 300.w,
-                    child: Card(
-                      color: Colors.white60,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20)
-                      ),
-                      child: Padding(
-                        padding: EdgeInsets.symmetric(vertical: 8.h,horizontal: 35.w),
-                        child: ListTile(
-                          title: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text('TASK 4',style:TextStyle(color: Colors.black,fontWeight: FontWeight.bold)),
-                              Text('QUESTIONS',style:TextStyle(color: Colors.black)),
-                              SizedBox(height: 20.h,),
-                              Text('DUE DATE',style:TextStyle(color: Colors.black,fontSize: 10.sp))
-                            ],
-                          ),
-
-
-                        ),
-                      ),
-                    ),
-              ),
-                  ),
-                ),
-                Align(
-                  alignment: Alignment(-0.95, 0),
-                  child: Container(
-                      decoration: BoxDecoration(
-                          color:  Colors.deepOrangeAccent,
-                          borderRadius: BorderRadius.circular(10)
-                      ),
-                      height: 70.h,
-                      width: 80.w
-                  ),
-                ),
-
-              ]
-            ),
-          ),
-        ),
 
         SizedBox(
           height:200.h

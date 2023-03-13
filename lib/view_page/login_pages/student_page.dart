@@ -51,7 +51,7 @@ class _Student_loginState extends State<Student_login> {
             child: Container(
               height: 150.h,
               width: 300.w,
-              child: Image.asset('assets/images/bottom.jpg',fit: BoxFit.cover,opacity: const AlwaysStoppedAnimation(.5),),
+              child: Image.asset('assets/images/bottom.jpg',fit: BoxFit.fill,opacity: const AlwaysStoppedAnimation(.5),),
             ),
           ),
 
@@ -62,7 +62,7 @@ class _Student_loginState extends State<Student_login> {
             child: Container(
               height: 150.h,
               width: 300.w,
-              child: Image.asset('assets/images/top.jpg',fit: BoxFit.cover,opacity: const AlwaysStoppedAnimation(.5),),
+              child: Image.asset('assets/images/top.jpg',fit: BoxFit.fill,opacity: const AlwaysStoppedAnimation(.5),),
             ),
           ),
 

@@ -2,6 +2,9 @@
 
 import 'package:card_swiper/card_swiper.dart';
 import 'package:eschool/constants/colors.dart';
+import 'package:eschool/view_page/homepage_parents/student_overview.dart';
+import 'package:eschool/view_page/homepage_student/menu_items/notice_page.dart';
+import 'package:eschool/view_page/sample_pages/profile_samples/sample_profile.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
@@ -248,7 +251,9 @@ class _OverviewPageState extends State<OverviewPage> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text('Latest Notices',style: TextStyle(fontSize: 20.sp,color: Colors.black)),
-                      Text('view all >',style: TextStyle(fontSize: 15.sp,color: Colors.grey)),
+                      InkWell(
+                          onTap: ()=>Get.to(()=>NoticeBoard()),
+                          child: Text('view all >',style: TextStyle(fontSize: 15.sp,color: Colors.grey))),
                     ],
                   ),
                 ),
@@ -347,30 +352,33 @@ class _OverviewPageState extends State<OverviewPage> {
         child: Center(
           child: Padding(
             padding: EdgeInsets.only(left: 25.w,top: 70.h),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Padding(
-                  padding : EdgeInsets.symmetric(horizontal : 8.w,vertical : 8.h),
-                  child: CircleAvatar(
-                      backgroundColor: Colors.white,
-                      radius: 30.sp,
-                      child: Icon(Icons.person,size:40.sp,color: Colors.grey)
+            child: InkWell(
+              onTap: ()=>Get.to(()=> StudentProfile()),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Padding(
+                    padding : EdgeInsets.symmetric(horizontal : 8.w,vertical : 8.h),
+                    child: CircleAvatar(
+                        backgroundColor: Colors.white,
+                        radius: 30.sp,
+                        child: Icon(Icons.person,size:40.sp,color: Colors.grey)
+                    ),
                   ),
-                ),
-                Padding(
-                  padding : EdgeInsets.symmetric(horizontal : 8.w,vertical : 8.h),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text('Username',style:TextStyle(fontSize: 25.sp,color: Colors.white),),
-                      Text('Class : 9 A | Roll No : 9',style:TextStyle(fontSize: 15.sp,color: Colors.white),)
-                    ],
-                  ),
-                )
-              ],
+                  Padding(
+                    padding : EdgeInsets.symmetric(horizontal : 8.w,vertical : 8.h),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text('Username',style:TextStyle(fontSize: 25.sp,color: Colors.white),),
+                        Text('Class : 9 A | Roll No : 9',style:TextStyle(fontSize: 15.sp,color: Colors.white),)
+                      ],
+                    ),
+                  )
+                ],
+              ),
             ),
           ),
         ),

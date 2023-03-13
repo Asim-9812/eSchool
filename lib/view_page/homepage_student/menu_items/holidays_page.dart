@@ -86,150 +86,168 @@ class _HolidaysState extends State<Holidays> {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        SizedBox(
-            height:60.h
-        ),
-        Text('Holidays',style : TextStyle(fontSize: 30.sp,color: Colors.white)),
-        SizedBox(
-            height:40.h
-        ),
-        Container(
-          // color:Colors.red,
-            width:350.w,
-            height: 430.h,
-            child: Stack(
-                children:[
+    return Scaffold(
+      backgroundColor: Colors.white,
+      body: Stack(
+        children: [
+          Container(
+            width: double.infinity,
+            height: 200.h,
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.vertical(bottom: Radius.circular(40),),
+                color: Color(0xff205578)
+            ),
 
-                  Positioned(
-                    top: 5.h,
-                    child: Column(
-                      children: [
-                        Container(
-                          // color: Colors.white,
-                          child: Center(
-                            child: Card(
-                              color: Colors.white,
-                              elevation: 5,
-                              shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(20)
-                              ),
-                              child: SizedBox(
-                                width: 340.w,
-                                height: 60.h,
-                              ),
+          ),
+          Center(
+            child: Column(
+              children: [
+                SizedBox(
+                    height:70.h
+                ),
+                Text('Holidays',style : TextStyle(fontSize: 30.sp,color: Colors.white)),
+                SizedBox(
+                    height:40.h
+                ),
+                Container(
+                  // color:Colors.red,
+                    width:350.w,
+                    height: 430.h,
+                    child: Stack(
+                        children:[
+
+                          Positioned(
+                            top: 5.h,
+                            child: Column(
+                              children: [
+                                Container(
+                                  // color: Colors.white,
+                                  child: Center(
+                                    child: Card(
+                                      color: Colors.white,
+                                      elevation: 5,
+                                      shape: RoundedRectangleBorder(
+                                          borderRadius: BorderRadius.circular(20)
+                                      ),
+                                      child: SizedBox(
+                                        width: 340.w,
+                                        height: 60.h,
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                                Container(
+                                  // color: Colors.white,
+                                  child: Center(
+                                    child: Card(
+                                      color: Colors.white,
+                                      elevation: 5,
+                                      shape: RoundedRectangleBorder(
+                                          borderRadius: BorderRadius.circular(20)
+                                      ),
+                                      child: SizedBox(
+                                        width: 340.w,
+                                        height: 330.h,
+                                      ),
+                                    ),
+                                  ),
+                                )
+                              ],
                             ),
                           ),
-                        ),
-                        Container(
-                          // color: Colors.white,
-                          child: Center(
-                            child: Card(
-                              color: Colors.white,
-                              elevation: 5,
-                              shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(20)
-                              ),
-                              child: SizedBox(
-                                width: 340.w,
-                                height: 330.h,
-                              ),
+
+
+                          TableCalendar(
+                            daysOfWeekHeight: 20.h,
+                            // shouldFillViewport: true,
+                            rowHeight: 50.h,
+                            eventLoader: _holidays,
+                            onDaySelected: (selectedDay, focusedDay) {
+                              if (!isSameDay (_selectedDate, selectedDay)) {
+                                // Call `setState()` when updating the selected day
+                                setState(() {
+                                  _selectedDate = selectedDay;
+                                  _focusedDay = focusedDay;
+                                });
+                              }
+                            },
+                            selectedDayPredicate: (day){
+                              return isSameDay(_selectedDate,day);
+                            },
+                            onPageChanged: (focusedDay){
+                              _focusedDay=focusedDay;
+                            },
+                            daysOfWeekStyle: DaysOfWeekStyle(
+                                weekdayStyle: TextStyle(color:Colors.blueAccent,fontSize: 15.sp),
+                                weekendStyle: TextStyle(color:Colors.blueAccent,fontSize: 15.sp)
                             ),
-                          ),
-                        )
-                      ],
-                    ),
-                  ),
+                            focusedDay: _focusedDay,
+                            firstDay: DateTime.utc(2021,01,01),
+                            lastDay: DateTime.utc(2024,12,12),
+                            headerStyle: HeaderStyle(
+                                formatButtonVisible: false,
+                                headerMargin: EdgeInsets.only(left:10.w,right:10.w,top:10.h,bottom:20.h),
+                                titleCentered: true,
+                                titleTextStyle: TextStyle(fontWeight: FontWeight.bold,color: Colors.black),
+                                leftChevronIcon: Icon(Icons.arrow_back_ios,color: Colors.black,),
+                                rightChevronIcon: Icon(Icons.arrow_forward_ios,color: Colors.black,)
+                            ),
+
+                            calendarStyle: CalendarStyle(
+                              defaultTextStyle:TextStyle(color: Colors.black) ,
+                              markerSize: 25.sp,
+                              markerDecoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(100),
+                                  color: Colors.green.withOpacity(0.7)
+                              ),
+                              markersAutoAligned: false,
+                              markersAlignment: Alignment.center,
+                              // cellMargin: EdgeInsets.all(10),
 
 
-                  TableCalendar(
-                    daysOfWeekHeight: 20.h,
-                    // shouldFillViewport: true,
-                    rowHeight: 50.h,
-                    eventLoader: _holidays,
-                    onDaySelected: (selectedDay, focusedDay) {
-                      if (!isSameDay (_selectedDate, selectedDay)) {
-                        // Call `setState()` when updating the selected day
-                        setState(() {
-                          _selectedDate = selectedDay;
-                          _focusedDay = focusedDay;
-                        });
-                      }
-                    },
-                    selectedDayPredicate: (day){
-                      return isSameDay(_selectedDate,day);
-                    },
-                    onPageChanged: (focusedDay){
-                      _focusedDay=focusedDay;
-                    },
-                    daysOfWeekStyle: DaysOfWeekStyle(
-                        weekdayStyle: TextStyle(color:Colors.blueAccent,fontSize: 15.sp),
-                        weekendStyle: TextStyle(color:Colors.blueAccent,fontSize: 15.sp)
-                    ),
-                    focusedDay: _focusedDay,
-                    firstDay: DateTime.utc(2021,01,01),
-                    lastDay: DateTime.utc(2024,12,12),
-                    headerStyle: HeaderStyle(
-                        formatButtonVisible: false,
-                        headerMargin: EdgeInsets.only(left:10.w,right:10.w,top:10.h,bottom:20.h),
-                        titleCentered: true,
-                        titleTextStyle: TextStyle(fontWeight: FontWeight.bold,color: Colors.black),
-                        leftChevronIcon: Icon(Icons.arrow_back_ios,color: Colors.black,),
-                        rightChevronIcon: Icon(Icons.arrow_forward_ios,color: Colors.black,)
-                    ),
-
-                    calendarStyle: CalendarStyle(
-                      defaultTextStyle:TextStyle(color: Colors.black) ,
-                      markerSize: 25.sp,
-                      markerDecoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(100),
-                          color: Colors.green.withOpacity(0.7)
-                      ),
-                      markersAutoAligned: false,
-                      markersAlignment: Alignment.center,
-                      // cellMargin: EdgeInsets.all(10),
+                              outsideDaysVisible: false,
+                              // tablePadding: EdgeInsets.symmetric(horizontal:10),
 
 
-                      outsideDaysVisible: false,
-                      // tablePadding: EdgeInsets.symmetric(horizontal:10),
-
-
-                    ),
+                            ),
 
 
 
-                  ),]
-            )
-        ),
+                          ),]
+                    )
+                ),
 
-        SizedBox(
-            height:30.h
-        ),
+                SizedBox(
+                    height:30.h
+                ),
 
 
-        // InkWell(
-        //   onTap: () async {
-        //     _showDialogEvent();
-        //   },
-        //   child: Container(
-        //     width: 50.w,
-        //     height: 50.h,
-        //     child: Center(
-        //       child: Card(
-        //           elevation: 10,
-        //           shape: RoundedRectangleBorder(
-        //             borderRadius: BorderRadius.circular(100.sp),
-        //           ),
-        //           child: Center(
-        //               child: Icon(Icons.add,color: Colors.black,)
-        //           )
-        //       ),
-        //     ),
-        //   ),
-        // )
+                // InkWell(
+                //   onTap: () async {
+                //     _showDialogEvent();
+                //   },
+                //   child: Container(
+                //     width: 50.w,
+                //     height: 50.h,
+                //     child: Center(
+                //       child: Card(
+                //           elevation: 10,
+                //           shape: RoundedRectangleBorder(
+                //             borderRadius: BorderRadius.circular(100.sp),
+                //           ),
+                //           child: Center(
+                //               child: Icon(Icons.add,color: Colors.black,)
+                //           )
+                //       ),
+                //     ),
+                //   ),
+                // )
 
-      ],
+              ],
+            ),
+          ),
+        ],
+      ),
     );
   }
 }

@@ -45,6 +45,7 @@ dependencies:
   google_fonts: ^4.0.3
   eva_icons_flutter: ^3.1.0
   icon_decoration: ^1.0.1
+  pie_chart: ^5.3.2
 
 flutter_native_splash:
   color: "#205578"

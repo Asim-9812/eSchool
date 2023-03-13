@@ -3,18 +3,19 @@
 
 import 'package:eschool/constants/colors.dart';
 import 'package:eschool/view_page/homepage_parents/menu_parents.dart';
+import 'package:eschool/view_page/sample_pages/profile_samples/sample_profile.dart';
 import 'package:eschool/view_page/sample_pages/subject_samples/subjects_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
-class StudentProfile extends StatefulWidget {
+class StudentOverview extends StatefulWidget {
 
   @override
-  State<StudentProfile> createState() => _StudentProfileState();
+  State<StudentOverview> createState() => _StudentOverviewState();
 }
 
-class _StudentProfileState extends State<StudentProfile> {
+class _StudentOverviewState extends State<StudentOverview> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,27 +31,31 @@ class _StudentProfileState extends State<StudentProfile> {
                   color: primary,
                   borderRadius: BorderRadius.vertical(bottom: Radius.circular(20))
                 ),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    SizedBox(
-                      height: 15.h,
-                    ),
-                    CircleAvatar(
-                      radius: 30.sp,
-                      backgroundColor: Colors.white,
-                      child: Icon(Icons.person,color: Colors.grey,size: 30.sp,),
-                    ),
-                    SizedBox(
-                      height: 5.h,
-                    ),
-                    Text('Name',style: TextStyle(color: Colors.white,fontSize: 20.sp,),),
-                    SizedBox(
-                      height: 5.h,
-                    ),
-                    Text('Class',style: TextStyle(color: Colors.white,fontSize: 15.sp,),)
-                  ],
+                child: InkWell(
+                  onTap: ()=>Get.to(()=>StudentProfile()),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      SizedBox(
+                        height: 15.h,
+                      ),
+                      CircleAvatar(
+                        radius: 30.sp,
+                        backgroundColor: Colors.white,
+                        child: Icon(Icons.person,color: Colors.grey,size: 30.sp,),
+                      ),
+                      SizedBox(
+                        height: 5.h,
+                      ),
+                      Text('Name',style: TextStyle(color: Colors.white,fontSize: 20.sp,),),
+
+                      Text('Class',style: TextStyle(color: Colors.white,fontSize: 15.sp,),)
+                    ],
+                  ),
                 ),
+              ),
+              SizedBox(
+                height: 5.h,
               ),
               Container(
                   height: 450.h,

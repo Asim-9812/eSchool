@@ -19,77 +19,70 @@ class _AssignmentPageState extends State<AssignmentPage> with TickerProviderStat
     TabController _tabController = TabController(length: 2, vsync: this);
     return Scaffold(
       backgroundColor: Colors.white,
-      body: Stack(
+      body: Column(
         children: [
 
-          SingleChildScrollView(
-            child: Column(
-              children: [
-                SizedBox(
-                  height: 130.h,
-                ),
-                Container(
-                  height: 720.h,
-                  child: Padding(
-                    padding: EdgeInsets.symmetric(vertical: 0.h,horizontal: 20.w),
-                    child: TabBarView(
+          Container(
+              height: 200.h,
+              width: double.infinity,
+              decoration: BoxDecoration(
+                  color: bgColor,
+                  borderRadius: BorderRadius.vertical(bottom:Radius.circular(25))
+              ),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  SizedBox(
+                    height: 20.h,
+                  ),
+                  Text('Assignments',style:TextStyle(color: Colors.white,fontSize:25.sp)),
+                  SizedBox(
+                    height: 10.h,
+                  ),
+                  TabBar(
 
                       controller: _tabController,
-                      children: [
-                        AssignmentTabs(),
-                        AssignmentTabs(),
-                      ],
-                    ),
+                      padding: EdgeInsets.symmetric(vertical: 15.h,horizontal: 30.w),
+
+                      labelStyle: TextStyle(fontSize: 15.sp,),
+                      unselectedLabelStyle: TextStyle(fontSize: 15.sp,),
+                      isScrollable: false,
+                      labelPadding: EdgeInsets.only(left: 15.w, right: 15.w),
+                      labelColor: primary,
+                      unselectedLabelColor: Colors.white,
+                      // indicatorColor: primary,
+                      indicator: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(10)
+                      ),
+                      tabs: [
+                        Tab(text: 'Assigned',),
+                        Tab(text: 'Submitted'),
+
+
+                      ]
                   )
-                )
-              ],
-            ),
+
+                ],
+              )
+          ),
+          Container(
+            // color: Colors.red,
+            height: 650.h,
+            child: Padding(
+              padding: EdgeInsets.symmetric(vertical: 0.h,horizontal: 20.w),
+              child: TabBarView(
+
+                controller: _tabController,
+                children: [
+                  AssignmentTabs(),
+                  AssignmentTabs(),
+                ],
+              ),
+            )
           ),
 
-          Container(
-            height: 200.h,
-            width: double.infinity,
-            decoration: BoxDecoration(
-                color: bgColor,
-                borderRadius: BorderRadius.vertical(bottom:Radius.circular(25))
-            ),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                SizedBox(
-                  height: 20.h,
-                ),
-                Text('Assignments',style:TextStyle(color: Colors.white,fontSize: 30.sp,fontWeight: FontWeight.bold)),
-                SizedBox(
-                  height: 10.h,
-                ),
-                TabBar(
 
-                    controller: _tabController,
-                    padding: EdgeInsets.symmetric(vertical: 15.h,horizontal: 30.w),
-
-                    labelStyle: TextStyle(fontSize: 20.sp,),
-                    unselectedLabelStyle: TextStyle(fontSize: 20.sp,),
-                    isScrollable: false,
-                    labelPadding: EdgeInsets.only(left: 15.w, right: 15.w),
-                    labelColor: primary,
-                    unselectedLabelColor: Colors.white,
-                    // indicatorColor: primary,
-                    indicator: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(10)
-                    ),
-                    tabs: [
-                      Tab(text: 'Assigned',),
-                      Tab(text: 'Submitted'),
-
-
-                    ]
-                )
-
-              ],
-            )
-          )
         ],
       )
     );

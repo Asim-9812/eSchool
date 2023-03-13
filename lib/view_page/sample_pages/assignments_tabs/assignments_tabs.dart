@@ -39,7 +39,13 @@ class _AssignmentTabsState extends State<AssignmentTabs> with TickerProviderStat
         automaticallyImplyLeading: false,
 
         backgroundColor: Colors.white,
-        bottom: TabBar(
+        // pinned: true,
+        primary: false,
+        centerTitle: false,
+        titleSpacing: 0.w,
+
+        title: TabBar(
+          padding: EdgeInsets.only(top: 10.h),
 
           labelStyle: TextStyle(fontSize: 15.sp),
             controller: _tabController,
