@@ -78,6 +78,7 @@ class _OverviewParentsState extends State<OverviewParents> {
                     Padding(
                       padding: EdgeInsets.only(left:30.w),
                       child: GridView(
+                        physics: NeverScrollableScrollPhysics(),
                         shrinkWrap: true,
                         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                             childAspectRatio: 2.w/2.4.h,
@@ -261,6 +262,7 @@ class _OverviewParentsState extends State<OverviewParents> {
                         width: 360.w,
                         height: 500.h,
                         child: ListView(
+                          physics: NeverScrollableScrollPhysics(),
 
                           children: [
                             Card(

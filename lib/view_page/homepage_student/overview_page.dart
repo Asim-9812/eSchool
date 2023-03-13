@@ -75,6 +75,7 @@ class _OverviewPageState extends State<OverviewPage> {
               width: 350.w,
               // color: Colors.red,
               child: GridView(
+                physics: NeverScrollableScrollPhysics(),
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                     childAspectRatio: 2.w/2.4.h,
                     crossAxisCount: 3, mainAxisSpacing: 5.h,crossAxisSpacing: 5.w),
@@ -262,6 +263,7 @@ class _OverviewPageState extends State<OverviewPage> {
                     width: 360.w,
                     height: 500.h,
                     child: ListView(
+                      physics: NeverScrollableScrollPhysics(),
 
                       children: [
                         Card(
