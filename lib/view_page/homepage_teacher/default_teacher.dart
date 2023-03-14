@@ -57,14 +57,14 @@ class _DefaultTeacherState extends State<DefaultTeacher> with TickerProviderStat
               duration: Duration(milliseconds:500),
               child: Card(
                 elevation: 5,
-                color: Colors.white,
+                color: Colors.blue,
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(10),
                   child: SizedBox(
                     width: 350.w,
                     height: 70.h,
                     child: BottomNavigationBar(
-                        backgroundColor: Colors.white,
+                        // backgroundColor: Colors.blue,
                         selectedItemColor: nav_color,
                         unselectedItemColor: Colors.white,
                         showSelectedLabels: true,
