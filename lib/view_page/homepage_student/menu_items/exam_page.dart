@@ -2,9 +2,11 @@
 
 
 import 'package:eschool/constants/colors.dart';
+import 'package:eschool/view_page/homepage_student/default_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:eschool/view_page/sample_pages/exam_tabs/exam_tabs.dart';
+import 'package:get/get.dart';
 
 class Examination extends StatefulWidget {
 
@@ -68,7 +70,7 @@ class _ExaminationState extends State<Examination> with TickerProviderStateMixin
                 ),
                 Container(
                   // color: Colors.red,
-                    height: 600.h,
+                    height: MediaQuery.of(context).size.height*4/6,
 
                     child: Padding(
                       padding: EdgeInsets.symmetric(vertical: 8.h,horizontal: 8.w),
@@ -82,6 +84,16 @@ class _ExaminationState extends State<Examination> with TickerProviderStateMixin
                     )
                 )
               ],
+            ),
+          ),
+          Positioned(
+            left: 15.w,
+            top:40.h,
+            child: IconButton(
+                onPressed: (){
+                  Get.to(()=>DefaultPage());
+                },
+                icon: Icon(Icons.arrow_back,color:Colors.white,size:25.sp)
             ),
           ),
         ],

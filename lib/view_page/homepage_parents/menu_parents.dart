@@ -38,7 +38,7 @@ class MenuParents extends StatelessWidget {
               Center(
                 child: Container(
                   width: 350.w,
-                  height: 670.h,
+                  height: MediaQuery.of(context).size.height*4.5/6,
                   // color: Colors.red,
                   child: ListView(
                     padding: EdgeInsets.symmetric(vertical: 10.h,horizontal: 0.w),

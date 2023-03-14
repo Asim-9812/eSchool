@@ -11,7 +11,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
 class Report extends StatefulWidget {
-  const Report({Key? key}) : super(key: key);
 
   @override
   State<Report> createState() => _ReportState();
@@ -81,11 +80,11 @@ class _ReportState extends State<Report> with TickerProviderStateMixin {
                     ]
                 ),
                 SizedBox(
-                  height: 50.h,
+                  height: 40.h,
                 ),
 
                 Container(
-                  height: 550.h,
+                  height: MediaQuery.of(context).size.height*3.8/6,
                   child: Padding(
                     padding: EdgeInsets.symmetric(horizontal: 15.h),
                     child: TabBarView(

@@ -1,6 +1,7 @@
 
 
 
+import 'package:eschool/view_page/homepage_student/default_page.dart';
 import 'package:eschool/view_page/sample_pages/report_tabs/reports.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -42,7 +43,7 @@ class _ReportPageState extends State<ReportPage> {
                 Padding(
                   padding: EdgeInsets.only(left:20.w,right: 20.w),
                   child: Container(
-                      height: 450.h,
+                      height: MediaQuery.of(context).size.height*4/6,
                       width: 350.w,
                       // color: Colors.red,
                       child: GridView(
@@ -217,6 +218,16 @@ class _ReportPageState extends State<ReportPage> {
                   ),
                 ),
               ],
+            ),
+          ),
+          Positioned(
+            left: 15.w,
+            top:40.h,
+            child: IconButton(
+                onPressed: (){
+                  Get.to(()=>DefaultPage());
+                },
+                icon: Icon(Icons.arrow_back,color:Colors.white,size:25.sp)
             ),
           ),
         ],

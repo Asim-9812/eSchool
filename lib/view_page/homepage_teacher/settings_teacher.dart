@@ -3,11 +3,12 @@
 import 'package:eschool/constants/colors.dart';
 import 'package:eschool/view_page/homepage_student/default_page.dart';
 import 'package:eschool/view_page/login_pages/login_page.dart';
+import 'package:eschool/view_page/login_pages/teacher_login.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
-class Settings extends StatelessWidget {
+class Settings_teacher extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
@@ -118,14 +119,14 @@ class Settings extends StatelessWidget {
                   ),
                 ),
                 TextButton(
-                  style: TextButton.styleFrom(
-                    backgroundColor: Colors.black,
-                    foregroundColor: Colors.white,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(20)
-                    )
-                  ),
-                    onPressed: ()=>Get.to(()=> LoginPage()),
+                    style: TextButton.styleFrom(
+                        backgroundColor: Colors.black,
+                        foregroundColor: Colors.white,
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20)
+                        )
+                    ),
+                    onPressed: ()=>Get.to(()=> Teacher_login()),
                     child: Padding(
                       padding: EdgeInsets.symmetric(horizontal: 25.w),
                       child: Row(

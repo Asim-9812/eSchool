@@ -19,32 +19,25 @@ class _TestPageState extends State<TestPage> {
 
   @override
   Widget build(BuildContext context) {
-    Map<String, double> dataMap = {
-      "Flutter": num,
-      "React": 3,
-      "Xamarin": 2,
-      "Ionic": 2,
-    };
-
     return Scaffold(
-      backgroundColor: Colors.white,
-      body: SafeArea(
-        child: Column(
-          children: [
-            PieChart(
-                chartType: ChartType.ring,
-                dataMap: dataMap,
-            ),
-
-            IconButton(
-                onPressed: (){
-
-                  num+=1;
-
-                }, icon: Icon(Icons.add,color: Colors.black,))
-
-          ],
-        ),
+      appBar: AppBar(title: Text('orientation')),
+      body: OrientationBuilder(
+        builder: (context, orientation) {
+          return GridView.count(
+            // Create a grid with 2 columns in portrait mode, or 3 columns in
+            // landscape mode.
+            crossAxisCount: orientation == Orientation.portrait ? 2 : 3,
+            // Generate 100 widgets that display their index in the List.
+            children: List.generate(100, (index) {
+              return Center(
+                child: Text(
+                  'Item $index',
+                  style: Theme.of(context).textTheme.displayLarge,
+                ),
+              );
+            }),
+          );
+        },
       ),
     );
   }

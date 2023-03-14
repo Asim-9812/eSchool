@@ -1,8 +1,10 @@
 
 
 import 'package:eschool/constants/colors.dart';
+import 'package:eschool/view_page/homepage_student/default_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 import 'package:intl/intl.dart';
 import 'package:table_calendar/table_calendar.dart';
 
@@ -244,6 +246,16 @@ class _HolidaysState extends State<Holidays> {
                 // )
 
               ],
+            ),
+          ),
+          Positioned(
+            left: 15.w,
+            top:40.h,
+            child: IconButton(
+                onPressed: (){
+                  Get.to(()=>DefaultPage());
+                },
+                icon: Icon(Icons.arrow_back,color:Colors.white,size:25.sp)
             ),
           ),
         ],

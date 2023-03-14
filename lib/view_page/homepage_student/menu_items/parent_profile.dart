@@ -1,7 +1,9 @@
 
 
+import 'package:eschool/view_page/homepage_student/default_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 
 class ParentsProfile extends StatelessWidget {
 
@@ -28,7 +30,7 @@ class ParentsProfile extends StatelessWidget {
                 ),
                 Text('Parents Profile',style : TextStyle(fontSize: 25.sp,color: Colors.white)),
                 SizedBox(
-                  height: 55.h,
+                  height: 60.h,
                 ),
                 Expanded(
                   child: ListView(
@@ -262,6 +264,16 @@ class ParentsProfile extends StatelessWidget {
                   ),
                 )
               ],
+            ),
+          ),
+          Positioned(
+            left: 15.w,
+            top:40.h,
+            child: IconButton(
+                onPressed: (){
+                  Get.to(()=>DefaultPage());
+                },
+                icon: Icon(Icons.arrow_back,color:Colors.white,size:25.sp)
             ),
           ),
         ],

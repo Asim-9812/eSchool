@@ -51,7 +51,7 @@ class _Parent_loginState extends State<Parent_login> {
             child: Container(
               height: 150.h,
               width: 300.w,
-              child: Image.asset('assets/images/bottom.jpg',fit: BoxFit.cover,opacity: const AlwaysStoppedAnimation(.5),),
+              child: Image.asset('assets/images/bottom.jpg',fit: BoxFit.fill,opacity: const AlwaysStoppedAnimation(.5),),
             ),
           ),
 
@@ -62,7 +62,7 @@ class _Parent_loginState extends State<Parent_login> {
             child: Container(
               height: 150.h,
               width: 300.w,
-              child: Image.asset('assets/images/top.jpg',fit: BoxFit.cover,opacity: const AlwaysStoppedAnimation(.5),),
+              child: Image.asset('assets/images/top.jpg',fit: BoxFit.fill,opacity: const AlwaysStoppedAnimation(.5),),
             ),
           ),
 
@@ -98,109 +98,118 @@ class _Parent_loginState extends State<Parent_login> {
                         key: _form,
                         child: Column(
                           children: [
-                            Padding(
-                              padding: EdgeInsets.only(bottom: 18.h),
-                              child: TextFormField(
-                                  controller: emailController,
-                                  validator:(val){
-                                    if(val!.isEmpty){
-                                      return 'email is  required';
-                                    }
-                                    else if(!val.contains('@')){
-                                      return 'please enter valid email';
-                                    }
-                                    return null;
-                                  },
-                                  style: TextStyle(color: Colors.white,fontSize: 25.sp),
-                                  decoration: InputDecoration(
-                                      contentPadding: EdgeInsets.symmetric(horizontal: 10.w),
-                                      enabledBorder: OutlineInputBorder(
-                                          borderRadius: BorderRadius.circular(10)
-                                      ),
-                                      focusedBorder: OutlineInputBorder(
-                                          borderRadius: BorderRadius.circular(10)
-                                      ),
+                            Container(
+                              width: 350,
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: [
+                                  Padding(
+                                    padding: EdgeInsets.only(bottom: 18.h),
+                                    child: TextFormField(
+                                        controller: emailController,
+                                        validator:(val){
+                                          if(val!.isEmpty){
+                                            return 'email is  required';
+                                          }
+                                          else if(!val.contains('@')){
+                                            return 'please enter valid email';
+                                          }
+                                          return null;
+                                        },
+                                        style: TextStyle(color: Colors.white,fontSize: 25.sp),
+                                        decoration: InputDecoration(
+                                            contentPadding: EdgeInsets.symmetric(horizontal: 10.w),
+                                            enabledBorder: OutlineInputBorder(
+                                                borderRadius: BorderRadius.circular(10)
+                                            ),
+                                            focusedBorder: OutlineInputBorder(
+                                                borderRadius: BorderRadius.circular(10)
+                                            ),
 
 
-                                      // fillColor: Colors.black,
-                                      // filled: true,
-                                      hintText: 'E-mail', hintStyle: TextStyle(color: Colors.black,fontSize: 25.sp)
-                                  )
-                              ),
-                            ),
-                            Padding(
-                              padding: EdgeInsets.only(bottom: 12.h),
-                              child: TextFormField(
-                                  controller: passwordController,
-                                  obscureText: true,
-                                  validator:(val){
-                                    if(val!.isEmpty){
-                                      return 'password is  required';
-                                    }
-                                    else if(val.length>20){
-                                      return 'maximum character exceeded';
-                                    }
-                                    return null;
-                                  },
-                                  style: TextStyle(color: Colors.white,fontSize: 25.sp),
-                                  decoration: InputDecoration(
-                                      contentPadding: EdgeInsets.symmetric(horizontal: 10.w),
-                                      enabledBorder: OutlineInputBorder(
-                                          borderRadius: BorderRadius.circular(10)
-                                      ),
-                                      focusedBorder: OutlineInputBorder(
-                                          borderRadius: BorderRadius.circular(10)
-                                      ),
-
-
-                                      // fillColor: Colors.black,
-                                      // filled: true,
-                                      hintText: 'Password', hintStyle: TextStyle(color: Colors.black,fontSize: 25.sp)
-                                  )
-                              ),
-                            ),
-                            Align(
-                              alignment: Alignment.bottomRight,
-                              child: InkWell(
-                                  onTap: (){},
-                                  child: Padding(
-                                    padding: EdgeInsets.only(bottom: 20.h),
-                                    child: Text('Reset password?',style: TextStyle(color: Colors.blue),),
-                                  )),
-                            ),
-                            Padding(
-                              padding: EdgeInsets.symmetric(vertical: 8.h,horizontal: 8.w),
-                              child: TextButton(
-                                style: TextButton.styleFrom(
-                                    backgroundColor: button,
-                                    foregroundColor: Colors.white,
-                                    fixedSize: Size.fromWidth(320.w),
-                                    shape: RoundedRectangleBorder(
-                                        borderRadius: BorderRadius.circular(10),
-                                        side: BorderSide(
-                                          color: Colors.black,
+                                            // fillColor: Colors.black,
+                                            // filled: true,
+                                            hintText: 'E-mail', hintStyle: TextStyle(color: Colors.black,fontSize: 25.sp)
                                         )
-                                    )
-                                ),
-                                onPressed: ()=>Get.to(()=> OverviewParents()),
-                                child: Padding(
-                                  padding: EdgeInsets.symmetric(vertical: 5.h,horizontal: 8.w),
-                                  child: Text('Sign In',style: TextStyle(fontSize: 25.sp,),),
-                                ),
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding: EdgeInsets.only(bottom: 12.h),
+                                    child: TextFormField(
+                                        controller: passwordController,
+                                        obscureText: true,
+                                        validator:(val){
+                                          if(val!.isEmpty){
+                                            return 'password is  required';
+                                          }
+                                          else if(val.length>20){
+                                            return 'maximum character exceeded';
+                                          }
+                                          return null;
+                                        },
+                                        style: TextStyle(color: Colors.white,fontSize: 25.sp),
+                                        decoration: InputDecoration(
+                                            contentPadding: EdgeInsets.symmetric(horizontal: 10.w),
+                                            enabledBorder: OutlineInputBorder(
+                                                borderRadius: BorderRadius.circular(10)
+                                            ),
+                                            focusedBorder: OutlineInputBorder(
+                                                borderRadius: BorderRadius.circular(10)
+                                            ),
+
+
+                                            // fillColor: Colors.black,
+                                            // filled: true,
+                                            hintText: 'Password', hintStyle: TextStyle(color: Colors.black,fontSize: 25.sp)
+                                        )
+                                    ),
+                                  ),
+                                  Align(
+                                    alignment: Alignment.bottomRight,
+                                    child: InkWell(
+                                        onTap: (){},
+                                        child: Padding(
+                                          padding: EdgeInsets.only(bottom: 20.h),
+                                          child: Text('Reset password?',style: TextStyle(color: Colors.blue),),
+                                        )),
+                                  ),
+                                  Padding(
+                                    padding: EdgeInsets.symmetric(vertical: 8.h,horizontal: 8.w),
+                                    child: TextButton(
+                                      style: TextButton.styleFrom(
+                                          backgroundColor: button,
+                                          foregroundColor: Colors.white,
+                                          fixedSize: Size.fromWidth(320.w),
+                                          shape: RoundedRectangleBorder(
+                                              borderRadius: BorderRadius.circular(10),
+                                              side: BorderSide(
+                                                color: Colors.black,
+                                              )
+                                          )
+                                      ),
+                                      onPressed: ()=>Get.to(()=> OverviewParents()),
+                                      child: Padding(
+                                        padding: EdgeInsets.symmetric(vertical: 5.h,horizontal: 8.w),
+                                        child: Text('Sign In',style: TextStyle(fontSize: 25.sp,),),
+                                      ),
+                                    ),
+                                  ),
+                                  Align(
+                                      alignment: Alignment.center,
+                                      child: InkWell(
+                                          onTap: (){
+                                            Get.to(()=>Student_login());
+                                          },
+                                          child: Text('Login as Student?',style: TextStyle(color: Colors.blue,fontSize: 20.sp),)))
+                                ],
                               ),
-                            ),
+                            )
                           ],
                         )
 
                     ),
 
-                    Align(
-                        alignment: Alignment.center,
-                        child: InkWell(
-                            onTap: (){
-                              Get.to(()=>Student_login());
-                            },
-                            child: Text('Login as Student?',style: TextStyle(color: Colors.blue,fontSize: 20.sp),)))
+
 
 
                   ],

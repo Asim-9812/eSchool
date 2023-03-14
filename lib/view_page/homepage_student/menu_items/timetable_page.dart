@@ -4,9 +4,11 @@
 import 'dart:convert';
 
 import 'package:eschool/constants/colors.dart';
+import 'package:eschool/view_page/homepage_student/default_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:eschool/view_page/sample_pages/routine_samples.dart';
+import 'package:get/get.dart';
 
 class TimeTable extends StatefulWidget {
   const TimeTable({Key? key}) : super(key: key);
@@ -39,13 +41,19 @@ class _TimeTableState extends State<TimeTable> with TickerProviderStateMixin{
           Center(
             child: Column(
               children: [
-                SizedBox(
-                    height:70.h
+                Container(
+                  width: double.infinity,
+                  height: MediaQuery.of(context).size.height *1/6,
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.vertical(bottom: Radius.circular(40),),
+                      color: Color(0xff205578)
+                  ),
+                  child:  Center(
+                    child: Text('Time Table',style : TextStyle(fontSize: 30.sp,color: Colors.white)),
+                  ),
+
                 ),
-                Text('Time Table',style : TextStyle(fontSize: 30.sp,color: Colors.white)),
-                SizedBox(
-                    height:30.h
-                ),
+
                 Padding(
                   padding: EdgeInsets.only(bottom: 15.h),
                   child: Container(
@@ -100,7 +108,7 @@ class _TimeTableState extends State<TimeTable> with TickerProviderStateMixin{
 
                 Container(
                   width: 350.w,
-                  height: 500.h,
+                  height: MediaQuery.of(context).size.height *3.7/6,
                   child: TabBarView(
                       controller: _tabController,
                       children:[
@@ -120,6 +128,16 @@ class _TimeTableState extends State<TimeTable> with TickerProviderStateMixin{
 
 
               ],
+            ),
+          ),
+          Positioned(
+            left: 15.w,
+            top:40.h,
+            child: IconButton(
+                onPressed: (){
+                  Get.to(()=>DefaultPage());
+                },
+                icon: Icon(Icons.arrow_back,color:Colors.white,size:25.sp)
             ),
           ),
         ],

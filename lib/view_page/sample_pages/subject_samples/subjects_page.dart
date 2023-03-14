@@ -86,7 +86,7 @@ class _SubjectsState extends State<Subjects> with TickerProviderStateMixin {
                 ),
 
                 Container(
-                  height: 600.h,
+                  height: MediaQuery.of(context).size.height*3.9/6,
                   // color: Colors.red,
                   child: TabBarView(
                     controller: _tabController,

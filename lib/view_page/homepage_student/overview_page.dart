@@ -52,7 +52,7 @@ class _OverviewPageState extends State<OverviewPage> {
                             ),
                             color: Colors.grey,
                             child: SizedBox(
-                              width: 320.w,
+                              width: 350.w,
                               height: 200.h,
                               child: Center(child: Text('Exam Date... ')),
                             ),

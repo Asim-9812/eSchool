@@ -23,7 +23,7 @@ class _AssignmentPageState extends State<AssignmentPage> with TickerProviderStat
         children: [
 
           Container(
-              height: 200.h,
+              height: MediaQuery.of(context).size.height * 1.2/5,
               width: double.infinity,
               decoration: BoxDecoration(
                   color: bgColor,
@@ -68,10 +68,11 @@ class _AssignmentPageState extends State<AssignmentPage> with TickerProviderStat
           ),
           Container(
             // color: Colors.red,
-            height: 650.h,
+            height: MediaQuery.of(context).size.height *3.8/5,
             child: Padding(
-              padding: EdgeInsets.symmetric(vertical: 0.h,horizontal: 20.w),
+              padding: EdgeInsets.symmetric(vertical: 0.h,horizontal: 15.w),
               child: TabBarView(
+                // physics: NeverScrollableScrollPhysics(),
 
                 controller: _tabController,
                 children: [

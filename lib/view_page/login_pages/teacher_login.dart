@@ -1,19 +1,19 @@
 
 import 'package:eschool/constants/colors.dart';
-import 'package:eschool/view_page/homepage_student/default_page.dart';
-import 'package:eschool/view_page/login_pages/parent_login.dart';
+import 'package:eschool/view_page/login_pages/student_page.dart';
+import 'package:eschool/view_page/homepage_teacher/default_teacher.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
-class Student_login extends StatefulWidget {
+class Teacher_login extends StatefulWidget {
   @override
-  State<Student_login> createState() => _Student_loginState();
+  State<Teacher_login> createState() => _Teacher_loginState();
 }
 
-class _Student_loginState extends State<Student_login> {
+class _Teacher_loginState extends State<Teacher_login> {
 
-  final usernameController = TextEditingController();
+  final emailController = TextEditingController();
   final passwordController = TextEditingController();
   final _form = GlobalKey<FormState>();
 
@@ -47,7 +47,7 @@ class _Student_loginState extends State<Student_login> {
           AnimatedContainer(
             duration: Duration(milliseconds: 700),
             alignment: Alignment(boxX, boxY),
-            curve: Curves.decelerate,
+            curve: Curves.bounceIn,
             child: Container(
               height: 150.h,
               width: 300.w,
@@ -58,7 +58,7 @@ class _Student_loginState extends State<Student_login> {
           AnimatedContainer(
             duration: Duration(milliseconds: 700),
             alignment: Alignment(boxX1, boxY1),
-            curve: Curves.decelerate,
+            curve: Curves.bounceIn,
             child: Container(
               height: 150.h,
               width: 300.w,
@@ -76,8 +76,8 @@ class _Student_loginState extends State<Student_login> {
               alignment: Alignment.center,
               child: Container(
                 padding: EdgeInsets.symmetric(horizontal: 12.w),
-                width: 350.w,
-                height: 550.h,
+                width: 350.0,
+                height: 550.0,
                 // color: Colors.green,
                 child: Column(
 
@@ -95,9 +95,8 @@ class _Student_loginState extends State<Student_login> {
                     ),
 
                     Form(
-                      key: _form,
+                        key: _form,
                         child: Column(
-
                           children: [
                             Container(
                               width: 350,
@@ -107,13 +106,13 @@ class _Student_loginState extends State<Student_login> {
                                   Padding(
                                     padding: EdgeInsets.only(bottom: 18.h),
                                     child: TextFormField(
-                                        controller: usernameController,
+                                        controller: emailController,
                                         validator:(val){
                                           if(val!.isEmpty){
-                                            return 'username is  required';
+                                            return 'email is  required';
                                           }
-                                          else if(val.length>20){
-                                            return 'maximum character exceeded';
+                                          else if(!val.contains('@')){
+                                            return 'please enter valid email';
                                           }
                                           return null;
                                         },
@@ -130,7 +129,7 @@ class _Student_loginState extends State<Student_login> {
 
                                             // fillColor: Colors.black,
                                             // filled: true,
-                                            hintText: 'Username', hintStyle: TextStyle(color: Colors.black,fontSize: 25.sp)
+                                            hintText: 'E-mail', hintStyle: TextStyle(color: Colors.black,fontSize: 25.sp)
                                         )
                                     ),
                                   ),
@@ -188,31 +187,22 @@ class _Student_loginState extends State<Student_login> {
                                               )
                                           )
                                       ),
-                                      onPressed: (){
-                                        Get.to(()=>DefaultPage());
-                                      },
+                                      onPressed: ()=>Get.to(()=> DefaultTeacher()),
                                       child: Padding(
                                         padding: EdgeInsets.symmetric(vertical: 5.h,horizontal: 8.w),
                                         child: Text('Sign In',style: TextStyle(fontSize: 25.sp,),),
                                       ),
                                     ),
                                   ),
-                                  Align(
-                                      alignment: Alignment.center,
-                                      child: InkWell(
-                                          onTap: (){
-                                            Get.to(()=>Parent_login());
-                                          },
-                                          child: Text('Login as Parent?',style: TextStyle(color: Colors.blue,fontSize: 20.sp),)))
+
                                 ],
                               ),
-                            ),
-
+                            )
                           ],
                         )
 
                     ),
-                    
+
 
 
 

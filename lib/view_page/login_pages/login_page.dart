@@ -43,9 +43,10 @@ class _LoginPageState extends State<LoginPage> with SingleTickerProviderStateMix
       body: Stack(
         children: [
           Container(
-              height: 400.h,
-              child: Padding(
-                padding: EdgeInsets.only(top:80.h,left: 80.w),
+              height: 350.h,
+              width: double.infinity,
+              // color: Colors.white,
+              child: Center(
                 child: Image.asset('assets/images/reading.JPG',height: 220.h,width:220.w),
               )
           ),
@@ -115,7 +116,7 @@ class _LoginPageState extends State<LoginPage> with SingleTickerProviderStateMix
                       ),
                     ),
                   ),
-                  
+
                 ],
               ),
             ),

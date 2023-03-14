@@ -1,6 +1,8 @@
 
 
 import 'package:eschool/view_page/homepage_student/assignment_page.dart';
+import 'package:eschool/view_page/homepage_teacher/teacher_profile.dart';
+import 'package:eschool/view_page/homepage_teacher/settings_teacher.dart';
 import 'package:eschool/view_page/homepage_student/menu_sheet.dart';
 import 'package:eschool/view_page/homepage_student/overview_page.dart';
 import 'package:flutter/material.dart';
@@ -9,13 +11,13 @@ import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 import 'package:eschool/constants/colors.dart';
 import 'package:icon_decoration/icon_decoration.dart';
 
-class DefaultPage extends StatefulWidget {
+class DefaultTeacher extends StatefulWidget {
 
   @override
-  State<DefaultPage> createState() => _DefaultPageState();
+  State<DefaultTeacher> createState() => _DefaultTeacherState();
 }
 
-class _DefaultPageState extends State<DefaultPage> with TickerProviderStateMixin{
+class _DefaultTeacherState extends State<DefaultTeacher> with TickerProviderStateMixin{
 
   int _index = 0;
   double boxX= 0;
@@ -24,7 +26,8 @@ class _DefaultPageState extends State<DefaultPage> with TickerProviderStateMixin
   final List<Widget>  _pages = [
     OverviewPage(),
     AssignmentPage(),
-    MenuPage()
+    Teacher(),
+    Settings_teacher()
   ];
 
   @override
@@ -67,46 +70,32 @@ class _DefaultPageState extends State<DefaultPage> with TickerProviderStateMixin
                         showSelectedLabels: true,
                         showUnselectedLabels: false,
                         onTap:(int index){
-                          if(index == 2) {
-                            showModalBottomSheet<void>(
-                              isScrollControlled: true,
-                                shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(40)
-                                ),
-                                backgroundColor: Colors.red,
-
-                                context: context,
-                                builder: (BuildContext context) {
-                                  return SizedBox(
-
-                                      height: MediaQuery.of(context).copyWith().size.height * 0.75 ,
-                                      child: MenuPage()
-                                  );
-                                });
-                          }
-                          else{
-                            setState(() {
-                              _index=index;
-                            });
-                          }
+                          setState(() {
+                            _index=index;
+                          });
                         },
                         currentIndex: _index,
                         items:[
                           BottomNavigationBarItem(icon: DecoratedIcon(
                             icon: Icon(EvaIcons.home,size: 27.sp,),
                             decoration: IconDecoration(border: IconBorder(
-                                width: 3.w
+                                width: 1.w
                             )),
                           ),label:'Home'),
                           BottomNavigationBarItem(icon: DecoratedIcon(
                             icon: Icon(EvaIcons.book,size: 27.sp,),
                             decoration: IconDecoration(border: IconBorder(
-                                width: 3.w
+                                width: 1.w
                             )),),label:'Subjects'),
                           BottomNavigationBarItem(icon: DecoratedIcon(
-                            icon: Icon(EvaIcons.menu,size: 27.sp,),
+                            icon: Icon(EvaIcons.person,size: 27.sp,),
                             decoration: IconDecoration(border: IconBorder(
-                                width: 3.w
+                                width: 1.w
+                            )),),label:'Profile'),
+                          BottomNavigationBarItem(icon: DecoratedIcon(
+                            icon: Icon(EvaIcons.settings,size: 27.sp,),
+                            decoration: IconDecoration(border: IconBorder(
+                                width: 1.w
                             )),),label:'Menu'),
                         ]
 

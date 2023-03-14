@@ -6,13 +6,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
-class StudentProfile extends StatefulWidget {
+class Teacher extends StatefulWidget {
 
   @override
-  State<StudentProfile> createState() => _StudentProfileState();
+  State<Teacher> createState() => _TeacherState();
 }
 
-class _StudentProfileState extends State<StudentProfile> {
+class _TeacherState extends State<Teacher> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -32,9 +32,9 @@ class _StudentProfileState extends State<StudentProfile> {
             child: Column(
               children: [
                 SizedBox(
-                  height: 70.h,
+                  height: 30.h,
                 ),
-                Text('Profile',style : TextStyle(fontSize: 30.sp,color: Colors.white)),
+                Text('Profile',style : TextStyle(fontSize: 20.sp,color: Colors.white)),
                 SizedBox(
                   height: 65.h,
                 ),
@@ -49,13 +49,16 @@ class _StudentProfileState extends State<StudentProfile> {
                           Padding(
                             padding: EdgeInsets.symmetric(vertical: 12.h),
                             child: CircleAvatar(
-                                backgroundColor: Colors.black,
-                                radius: 50.sp,
-                                child: Icon(Icons.person,size:40.sp,color: Colors.grey)
+                                backgroundColor: Colors.white,
+                                radius: 55.sp,
+                                child: CircleAvatar(
+                                  backgroundColor: Colors.black,
+                                  radius: 50.sp,
+                                  child: Icon(Icons.person,size:40.sp,color: Colors.grey),
+                                )
                             ),
                           ),
-                          Text('Full Name',style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 30.sp),),
-                          Text('GR Number',style: TextStyle(color: Colors.black,fontSize: 20.sp),),
+                          Text('Teacher',style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 30.sp),),
                           Divider(
                             thickness: 1.h,
                             height: 30.h,
@@ -85,32 +88,7 @@ class _StudentProfileState extends State<StudentProfile> {
                               Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  Text('Class',style: TextStyle(color: Colors.black,fontSize: 18.sp),),
-                                  Text('9 A',style: TextStyle(color: Colors.black,fontSize: 18.sp),),
-                                ],
-                              )
-                            ],
-                          ),
-                          SizedBox(
-                            height: 30.h,
-                          ),
-                          Row(
-                            children: [
-                              Container(
-                                height: 50.h,
-                                width: 50.w,
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(10),
-                                  color: primary,
-                                ),
-                              ),
-                              SizedBox(
-                                width: 10.w,
-                              ),
-                              Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text('Medium',style: TextStyle(color: Colors.black,fontSize: 18.sp),),
+                                  Text('E-mail',style: TextStyle(color: Colors.black,fontSize: 18.sp),),
                                   Text('-',style: TextStyle(color: Colors.black,fontSize: 18.sp),),
                                 ],
                               )
@@ -135,8 +113,34 @@ class _StudentProfileState extends State<StudentProfile> {
                               Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  Text('Roll No.',style: TextStyle(color: Colors.black,fontSize: 18.sp),),
-                                  Text('9',style: TextStyle(color: Colors.black,fontSize: 18.sp),),
+                                  Text('Phone Number',style: TextStyle(color: Colors.black,fontSize: 18.sp),),
+                                  Text('-',style: TextStyle(color: Colors.black,fontSize: 18.sp),),
+                                ],
+                              )
+                            ],
+                          ),
+                          SizedBox(
+                            height: 30.h,
+                          ),
+
+                          Row(
+                            children: [
+                              Container(
+                                height: 50.h,
+                                width: 50.w,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(10),
+                                  color: primary,
+                                ),
+                              ),
+                              SizedBox(
+                                width: 10.w,
+                              ),
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text('Date of Birth',style: TextStyle(color: Colors.black,fontSize: 18.sp),),
+                                  Text('-',style: TextStyle(color: Colors.black,fontSize: 18.sp),),
                                 ],
                               )
                             ],
@@ -160,7 +164,32 @@ class _StudentProfileState extends State<StudentProfile> {
                               Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  Text('Date of Birth',style: TextStyle(color: Colors.black,fontSize: 18.sp),),
+                                  Text('Gender',style: TextStyle(color: Colors.black,fontSize: 18.sp),),
+                                  Text('-',style: TextStyle(color: Colors.black,fontSize: 18.sp),),
+                                ],
+                              )
+                            ],
+                          ),
+                          SizedBox(
+                            height: 30.h,
+                          ),
+                          Row(
+                            children: [
+                              Container(
+                                height: 50.h,
+                                width: 50.w,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(10),
+                                  color: primary,
+                                ),
+                              ),
+                              SizedBox(
+                                width: 10.w,
+                              ),
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text('Qualification',style: TextStyle(color: Colors.black,fontSize: 18.sp),),
                                   Text('-',style: TextStyle(color: Colors.black,fontSize: 18.sp),),
                                 ],
                               )
@@ -211,81 +240,6 @@ class _StudentProfileState extends State<StudentProfile> {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Text('Permanent Address',style: TextStyle(color: Colors.black,fontSize: 18.sp),),
-                                  Text('-',style: TextStyle(color: Colors.black,fontSize: 18.sp),),
-                                ],
-                              )
-                            ],
-                          ),
-                          SizedBox(
-                            height: 30.h,
-                          ),
-                          Row(
-                            children: [
-                              Container(
-                                height: 50.h,
-                                width: 50.w,
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(10),
-                                  color: primary,
-                                ),
-                              ),
-                              SizedBox(
-                                width: 10.w,
-                              ),
-                              Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text('Blood Group',style: TextStyle(color: Colors.black,fontSize: 18.sp),),
-                                  Text('-',style: TextStyle(color: Colors.black,fontSize: 18.sp),),
-                                ],
-                              )
-                            ],
-                          ),
-                          SizedBox(
-                            height: 30.h,
-                          ),
-                          Row(
-                            children: [
-                              Container(
-                                height: 50.h,
-                                width: 50.w,
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(10),
-                                  color: primary,
-                                ),
-                              ),
-                              SizedBox(
-                                width: 10.w,
-                              ),
-                              Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text('Weight',style: TextStyle(color: Colors.black,fontSize: 18.sp),),
-                                  Text('-',style: TextStyle(color: Colors.black,fontSize: 18.sp),),
-                                ],
-                              )
-                            ],
-                          ),
-                          SizedBox(
-                            height: 30.h,
-                          ),
-                          Row(
-                            children: [
-                              Container(
-                                height: 50.h,
-                                width: 50.w,
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(10),
-                                  color: primary,
-                                ),
-                              ),
-                              SizedBox(
-                                width: 10.w,
-                              ),
-                              Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text('Height',style: TextStyle(color: Colors.black,fontSize: 18.sp),),
                                   Text('-',style: TextStyle(color: Colors.black,fontSize: 18.sp),),
                                 ],
                               )
