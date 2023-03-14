@@ -1,3 +1,5 @@
+
+
 import 'package:eschool/view_page/homepage_student/default_page.dart';
 import 'package:eschool/view_page/homepage_student/overview_page.dart';
 import 'package:eschool/test.dart';
@@ -22,6 +24,7 @@ void main() async{
 }
 
 class Home extends StatelessWidget {
+
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -30,13 +33,23 @@ class Home extends StatelessWidget {
       minTextAdapt: true,
       splitScreenMode: true,
       builder: (context, child) {
+
         return GetMaterialApp(
           theme: _buildTheme(Brightness.dark),
           debugShowCheckedModeBanner: false,
           home: child,
+          builder: (BuildContext context, Widget? child){
+        final MediaQueryData data = MediaQuery.of(context);
+        return MediaQuery(
+        data: data.copyWith(
+        textScaleFactor: 0.9),
+        child: child!,
+        );
+          } ,
         );
       },
-      child: LoginPage(),
+      child:  LoginPage()
+
     );
   }
 }

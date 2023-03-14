@@ -67,9 +67,27 @@ class _DefaultPageState extends State<DefaultPage> with TickerProviderStateMixin
                         showSelectedLabels: true,
                         showUnselectedLabels: false,
                         onTap:(int index){
+                        if(index == 2) {
+                          showModalBottomSheet<void>(
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(40)
+                              ),
+                            backgroundColor: Colors.red,
+                              isScrollControlled: true,
+                              context: context,
+                              builder: (BuildContext context) {
+                                return SizedBox(
+
+                                  height: MediaQuery.of(context).copyWith().size.height * (3 / 5),
+                                  child: MenuPage()
+                                );
+                              });
+                        }
+                        else{
                           setState(() {
                             _index=index;
                           });
+                        }
                         },
                         currentIndex: _index,
                         items:[

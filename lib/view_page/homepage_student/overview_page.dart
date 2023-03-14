@@ -29,7 +29,7 @@ class _OverviewPageState extends State<OverviewPage> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 SizedBox(
-                  height: 225.h,
+                  height: 200.h,
                 ),
 
                 Container(
@@ -66,7 +66,7 @@ class _OverviewPageState extends State<OverviewPage> {
                 ),
         Padding(
             padding : EdgeInsets.symmetric(horizontal : 30.w,vertical : 8.h),
-            child: Text('My Subjects',style:TextStyle(fontSize: 25.sp,fontWeight : FontWeight.bold,color: Colors.black) ),
+            child: Text('My Subjects',style:TextStyle(fontSize: 20.sp,color: Colors.black) ),
         ),
         Padding(
           padding: EdgeInsets.only(left:20.w),
